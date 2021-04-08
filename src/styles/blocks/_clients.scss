@@ -1,0 +1,31 @@
+.clients {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  html[data-theme=dark] & {
+    color: $text-color--light !important;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+
+    &-item {
+      text-align: center;
+      width: 260px;
+    }
+  }
+}

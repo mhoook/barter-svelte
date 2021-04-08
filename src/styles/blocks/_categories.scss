@@ -1,0 +1,28 @@
+.categories {
+  &__item {
+    cursor: pointer;
+    padding: 17px 25px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: fit-content;
+
+    @include breakpoint-down(md) {
+      font-size: $font-size--md-mobile;
+      padding: 7px 14px;
+      border-radius: 5px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+
+      @include breakpoint-down(md) {
+        margin-top: 10px;
+      }
+    }
+
+    &.active {
+      background: $background-color--primary-gradient;
+      color: white;
+    }
+  }
+}

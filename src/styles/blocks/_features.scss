@@ -1,0 +1,42 @@
+.features {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  html[data-theme="dark"] & {
+    color: $text-color--light !important;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+    padding-bottom: 100px;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    &-content {
+      &-title {
+        text-transform: uppercase;
+      }
+    }
+    &-title {
+      font-weight: 500;
+    }
+    &-description {
+      margin-bottom: 0;
+    }
+  }
+}

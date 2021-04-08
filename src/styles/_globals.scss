@@ -1,0 +1,190 @@
+html,
+body {
+  width: 100vw !important;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $background-color--main;
+  html[data-theme="dark"] & {
+    background-color: $background-color--main-dark;
+  }
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 110%;
+
+  @include breakpoint-down(md) {
+    font-size: 16px;
+  }
+}
+
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 110%;
+
+  text-transform: uppercase;
+
+  @include breakpoint-down(md) {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 140%;
+
+  @include breakpoint-down(md) {
+    font-size: 20px;
+  }
+}
+
+h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 140%;
+
+  @include breakpoint-down(md) {
+    font-size: 18px;
+  }
+}
+
+h5 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 140%;
+
+  @include breakpoint-down(md) {
+    font-size: 16px;
+  }
+}
+
+p {
+  color: $text-color--main-paragraph;
+
+  @include breakpoint-down(md) {
+    font-size: 12px;
+  }
+}
+
+.nav-item {
+  margin-right: 40px;
+}
+
+.nav-item a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("/src/assets/icons/burger.svg");
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.card {
+  box-shadow: $box-shadow--card;
+  border-radius: 10px;
+  padding: 26px;
+
+  html[data-theme="dark"] & {
+    color: $text-color--main !important;
+  }
+
+  @include breakpoint-down(md) {
+    padding: 12px;
+  }
+}
+
+.accordion-header {
+  background: $background-color--main;
+  color: $text-color--main;
+  border-radius: 10px !important;
+}
+
+.accordion-button {
+  border-radius: 10px !important;
+}
+
+.accordion-button::after {
+  background-image: url("/src/assets/icons/arrow-right.svg");
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+
+  @include breakpoint-down(md) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("/src/assets/icons/arrow-right.svg");
+  transform: rotate(90deg);
+}
+
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: inherit;
+}
+
+.accordion-body {
+  @include breakpoint-down(md) {
+    font-size: 12px;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(md) {
+    display: none !important;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(md) {
+    display: none !important;
+  }
+}
+
+.hide-for-dark {
+  html[data-theme="dark"] & {
+    display: none !important;
+  }
+}
+
+.hide-for-light {
+  html:not([data-theme="dark"]) & {
+    display: none !important;
+  }
+}
+
+.navbar {
+  button[aria-expanded="true"] > .navbar-toggler-icon {
+    display: none;
+  }
+
+  button[aria-expanded="false"] > .navbar-toggler-icon-close {
+    display: none;
+  }
+}

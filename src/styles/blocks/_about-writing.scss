@@ -1,0 +1,54 @@
+.about-writing {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  html[data-theme=dark] & {
+    color: $text-color--light !important;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+
+    @include breakpoint-down(md) {
+      width: 298px;
+    }
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+  }
+
+  &__items {
+    max-width: 100vw;
+
+    @include breakpoint-down(md) {
+      width: 80%;
+    }
+  }
+
+  &__item {
+    &-wrapper {
+      padding: 15px;
+      width: 850px;
+    }
+
+    &-image {
+      img {
+        @include breakpoint-down(md) {
+          width: 112px;
+        }
+      }
+    }
+  }
+}

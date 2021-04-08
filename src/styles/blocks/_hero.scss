@@ -1,0 +1,140 @@
+.hero {
+  position: relative;
+  padding-bottom: $padding--section-default;
+  min-height: 80vh;
+
+  @include breakpoint-down(md) {
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  html[data-theme="dark"] & {
+    color: $text-color--light !important;
+  }
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 52vw;
+
+    @include breakpoint-down(md) {
+      width: 50vw;
+    }
+
+    img {
+      position: relative;
+      right: 0;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: 0;
+    }
+
+    &-description {
+      font-size: 20px;
+      opacity: 0.7;
+    }
+
+    &-text {
+      @include breakpoint-down(md) {
+        margin-bottom: 10px !important;
+      }
+
+      &-wrapper {
+        @include breakpoint-down(md) {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    &-image {
+      &-wrapper {
+        text-align: center;
+      }
+
+      @include breakpoint-down(md) {
+        max-width: 260px;
+      }
+    }
+
+    &-actions {
+      margin-top: 50px;
+
+      @include breakpoint-down(md) {
+        margin-top: 0;
+      }
+
+      &-description {
+        margin-bottom: 0;
+      }
+
+      &-wrapper {
+        @include breakpoint-down(md) {
+          text-align: center;
+          margin-top: 25px;
+        }
+      }
+    }
+
+    &-tryit-btn {
+      width: 300px;
+
+      @include breakpoint-down(md) {
+        width: 160px;
+      }
+    }
+
+    &-more-link {
+      margin-left: 50px;
+
+      @include breakpoint-down(md) {
+        margin-left: 15px !important;
+      }
+    }
+  }
+
+  &__features {
+    &-wrapper {
+      @include breakpoint-up(md) {
+        margin-top: 20px
+      }
+    }
+    &-item {
+      max-width: 280px;
+
+      @include breakpoint-down(md) {
+        margin-left: 0 !important;
+        margin-top: 5px;
+        max-width: 180px;
+      }
+
+      &-wrapper {
+        @include breakpoint-down(md) {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &-description {
+        @include breakpoint-down(md) {
+          font-size: 10px;
+          line-height: 140%;
+        }
+      }
+
+      img {
+        @include breakpoint-down(md) {
+          width: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.for-you {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  html[data-theme="dark"] & {
+    color: $text-color--light !important;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+  }
+
+  &__item {
+    &-wrapper {
+      padding-left: 10vw;
+
+      @include breakpoint-down(md) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .order-md-2 {
+        padding-left: 0;
+        padding-right: 10vw;
+
+        @include breakpoint-down(md) {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    }
+
+    > .order-md-1 {
+      justify-content: flex-end;
+    }
+
+    &-content {
+      &-text {
+        &-wrapper {
+          margin-left: 70px;
+          margin-right: 70px;
+
+          @include breakpoint-down(md) {
+            margin: 0;
+          }
+        }
+      }
+
+      &-image {
+        @include breakpoint-down(md) {
+          max-width: 250px;
+        }
+        &-wrapper {
+          @include breakpoint-down(md) {
+            text-align: center;
+          }
+        }
+      }
+
+      &-description {
+        position: relative;
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 200px;
+        line-height: 140%;
+        max-width: 450px;
+
+        @include breakpoint-down(md) {
+          margin-top: 20px;
+          max-width: auto;
+          text-align: center;
+          font-size: $font-size--md-mobile;
+        }
+
+        &::before {
+          content: " ";
+          position: absolute;
+          top: -100px;
+          left: 0;
+          width: 100px;
+          height: 100px;
+          background-image: url("/src/assets/svg/elipse-line.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform: rotateY(180deg);
+
+          @include breakpoint-down(md) {
+            content: none;
+          }
+        }
+
+        .order-md-1 &::before {
+          content: " ";
+          left: auto;
+          right: 0;
+          transform: rotateY(0deg);
+
+          @include breakpoint-down(md) {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}

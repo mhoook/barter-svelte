@@ -1,0 +1,76 @@
+.slick-next {
+  background: url("/src/assets/icons/arrow-right.svg") no-repeat center;
+  background-size: 90%;
+  width: 64px;
+  height: 64px;
+  right: -74px;
+
+  @include breakpoint-down(md) {
+    width: 33px;
+    height: 33px;
+    right: -33px;
+  }
+
+  &:before {
+    content: none !important;
+  }
+
+  &:hover, &:focus {
+    background: url("/src/assets/icons/arrow-right.svg") no-repeat center;
+    background-size: 90%;
+  }
+}
+
+.slick-prev {
+  background: url("/src/assets/icons/arrow-left.svg") no-repeat center;
+  background-size: 90%;
+  width: 64px;
+  height: 64px;
+  left: -74px;
+
+  @include breakpoint-down(md) {
+    width: 33px;
+    height: 33px;
+    left: -33px;
+  }
+
+  &:before {
+    content: none !important;
+  }
+
+  &:hover, &:focus {
+    background: url("/src/assets/icons/arrow-left.svg") no-repeat center;
+    background-size: 90%;
+  }
+}
+
+.slick-dots {
+  bottom: -30px;
+  @include breakpoint-up(md) {
+    bottom: -60px;
+  }
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+
+  @include breakpoint-up(md) {
+    font-size: 17px;
+  }
+  
+  html[data-theme=dark] & {
+    color: $text-color--primary-gradient;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: $text-color--primary !important;
+}
+
+.slick-dots li button {
+  padding: 0;
+}
+
+// .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+//   background: inherit !important;
+// }

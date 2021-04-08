@@ -1,0 +1,66 @@
+.header {
+  position: relative;
+  z-index: 9;
+  background: white;
+
+  &__left-wrapper {
+    text-align: left;
+  }
+
+  &__right-wrapper {
+    text-align: right;
+  }
+
+  &__links {
+    position: relative;
+  }
+
+  &__login {
+    @include breakpoint-down(md) {
+      padding-top: 35px;
+    }
+    &-button {
+      @include breakpoint-down(md) {
+        border-radius: 7px !important;
+      }
+    }
+  }
+
+  &__navbar {
+    &-collapse {
+      @include breakpoint-down(md) {
+        position: absolute;
+        z-index: 99;
+        background-color: white;
+        top: 56px;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+      }
+    }
+    &-container {
+      @include breakpoint-down(md) {
+        padding: 0;
+      }
+    }
+    &-nav {
+      @include breakpoint-down(md) {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 70px !important;
+      }
+
+      li {
+        @include breakpoint-down(md) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    @include breakpoint-down(md) {
+      width: 100px;
+      height: auto;
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.list {
+  &--primary {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+  }
+
+  &__features {
+    li {
+      margin-top: 20px;
+    }
+
+    &-description {
+      font-size: 20px;
+      @include breakpoint-down(md) {
+        font-size: 14px;
+      }
+    }
+
+    &-image {
+      &-wrapper {
+        @include breakpoint-down(md) {
+          min-width: fit-content !important;
+        }
+      }
+    }
+  }
+}

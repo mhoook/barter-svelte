@@ -1,0 +1,65 @@
+.advantages {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  html[data-theme=dark] & {
+    color: $text-color--light !important;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+
+    @include breakpoint-down(md) {
+      font-size: 16px;
+      width: 246px;
+    }
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+
+    &-second-steps-block {
+      @include breakpoint-down(md) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__item {
+    &-content {
+      &-index {
+        font-weight: bold;
+        font-size: $font-size--xl;
+        line-height: 100%;
+        text-align: center;
+  
+        @include breakpoint-down(md) {
+          font-size: $font-size--xl-mobile;
+        }
+      }
+
+      &-description {
+        margin-bottom: 0;
+        max-width: 400px;
+  
+        @include breakpoint-up(md) {
+          font-size: $font-size--lg-mobile;
+        }
+  
+        @include breakpoint-down(md) {
+          max-width: auto;
+        }
+      }
+    }
+  }
+}

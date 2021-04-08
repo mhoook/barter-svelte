@@ -1,0 +1,61 @@
+$color--secondary: #e31266;
+$color--primary: #f8493c;
+$color--primary-light: #f4943e;
+
+$text-color--main: #171717;
+$text-color--main-paragraph: #242A38;
+$text-color--primary: #f8493c;
+$text-color--light: white;
+$text-color--muted: #898989;
+$text-color--primary-gradient: linear-gradient(
+  180deg,
+  $color--secondary 0%,
+  $color--primary 48.75%,
+  $color--primary-light 100%
+);
+
+$background-color--main: #ffffff;
+$background-color--main-dark: #171717;
+$background-color--hero: #ffffff;
+$background-color--primary-gradient: linear-gradient(
+  180deg,
+  $color--secondary 0%,
+  $color--primary 48.75%,
+  $color--primary-light 100%
+);
+$background-color--primary-gradient-horizontal: linear-gradient(
+  92.63deg,
+  $color--secondary 1.51%,
+  $color--primary 50.55%,
+  $color--primary-light 100%
+);
+$background-color--primary-gradient-horizontal-inverse: linear-gradient(
+  92.63deg,
+  $color--primary-light 1.51%,
+  $color--primary 50.55%,
+  $color--secondary 100%
+);
+
+$padding--section-lg: 140px;
+$padding--section-lg-mobile: 70px;
+$padding--section-default: 70px;
+$padding--section-default-mobile: 35px;
+$padding--section-small: 40px;
+$padding--section-small-mobile: 20px;
+
+$margin--section-content-default: 100px;
+$margin--section-content-default-mobile: 50px;
+
+$margin--section-content-sm: 50px;
+$margin--section-content-sm-mobile: 30px;
+
+$font-size--xl: 36px;
+$font-size--xl-mobile: 30px;
+$font-size--lg: 24px;
+$font-size--lg-mobile: 20px;
+$font-size--md: 20px;
+$font-size--md-mobile: 16px;
+$font-size--sm: 16px;
+$font-size--sm-mobile: 12px;
+
+$box-shadow--card: 2px 2px 9px rgba(0, 0, 0, 0.25);

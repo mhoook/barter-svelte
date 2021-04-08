@@ -1,0 +1,80 @@
+.reviews {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  html[data-theme=dark] & {
+    color: $text-color--light !important;
+  }
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+    background-size: 180%;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+
+    @include breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+  }
+
+  &__items {
+    max-width: 720px;
+
+    @include breakpoint-down(md) {
+      width: 88%;
+    }
+  }
+
+  &__item {
+    background-image: url("/src/assets/images/quote.png");
+    background-position: 90% 5%;
+    background-repeat: no-repeat;
+
+    &-wrapper {
+      padding: 15px;
+
+      @include breakpoint-down(md) {
+        padding: 10px;
+      }
+    }
+
+    &-author {
+      &-avatar {
+        img { 
+          width: 100px;
+
+          @include breakpoint-down(md) {
+            width: 50px;
+          }
+        }
+      }
+
+      &-link {
+        display: block;
+      }
+
+      &-content {
+        width: 400px;
+      }
+    }
+
+    &-content {
+      @include breakpoint-down(md) {
+        padding: 0;
+      }
+    }
+  }
+}

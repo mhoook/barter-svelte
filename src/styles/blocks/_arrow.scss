@@ -1,0 +1,20 @@
+.arrow {
+  position: relative;
+  z-index: 9;
+  margin-top: 80px;
+
+  &__image {
+    cursor: pointer;
+  }
+
+  &--down {
+    transform: rotate(90deg);
+  }
+  
+  &--next-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

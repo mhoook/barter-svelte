@@ -1,0 +1,46 @@
+.user {
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    @include breakpoint-down(md) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__data {
+    &--avatar-inline {
+      margin-left: 33px;
+      @include breakpoint-down(md) {
+        margin-left: 15px;
+      }
+    }
+
+    &-videoplay {
+      @include breakpoint-down(md) {
+        padding-right: 15px;
+        padding-top: 15px;
+      }
+      &-icon {
+        @include breakpoint-down(md) {
+          width: 31px;
+        }
+      }
+    }
+
+    &-title {
+      @include breakpoint-down(md) {
+        font-size: $font-size--md-mobile !important;
+        margin-bottom: 0;
+      }
+    }
+
+    &-description {
+      @include breakpoint-down(md) {
+        margin-top: 0;
+        font-size: $font-size--sm-mobile !important;
+      }
+    }
+  }
+}

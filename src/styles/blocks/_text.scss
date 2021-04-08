@@ -1,0 +1,47 @@
+.text {
+  position: relative;
+
+  &--gradient-primary {
+    background: $background-color--primary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $text-color--primary;
+  }
+
+  &--larger {
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 110%;
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--bolder {
+    font-weight: 800;
+  }
+
+  &--light {
+    color: $text-color--light;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--outlined-mask {
+    text-shadow: 2px 0 0 $background-color--primary-gradient;
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    word-spacing: -20px;
+    font-weight: 500;
+    color: white;
+    font-size: 93px;
+    line-height: 109%;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+    width: 117px !important;
+  }
+}

@@ -1,0 +1,17 @@
+.modal-video-about {
+  &__content {
+    background: transparent;
+    border: none;
+  }
+
+  &__video {
+    width: 60vw;
+    height: calc(60vw / 1.77);
+    margin: 0 auto;
+
+    @include breakpoint-down(md) {
+      width: 90vw;
+      height: calc(90vw / 1.77);
+    }
+  }
+}

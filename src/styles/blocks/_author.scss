@@ -1,0 +1,7 @@
+.author {
+  &__link {
+    @include breakpoint-down(md) {
+      font-size: 12px;
+    }
+  }
+}
