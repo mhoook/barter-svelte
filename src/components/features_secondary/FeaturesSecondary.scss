@@ -1,0 +1,79 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.features-secondary {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+    background-image: none !important;
+  }
+
+  html[data-theme='dark'] & {
+    color: $text-color--light !important;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+    padding-bottom: 100px;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    &-title {
+      font-weight: 500;
+    }
+    &-description {
+      margin-bottom: 0;
+    }
+    &-content {
+      @include breakpoint-down(md) {
+        display: block !important;
+        text-align: center;
+      }
+      &-text {
+        @include breakpoint-down(md) {
+          margin: 0 !important;
+          margin-top: 10px !important;
+        }
+      }
+      &-image {
+        @include breakpoint-down(md) {
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        .card-body {
+          @include breakpoint-down(md) {
+            padding: 10px;
+          }
+        }
+
+        img {
+          @include breakpoint-down(md) {
+            width: 50px;
+          }
+        }
+      }
+      &-description {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        @include breakpoint-down(md) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@
     border-radius: 6px;
     width: 53px;
     height: 53px;
-    padding: 5px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,13 +23,16 @@
       border-radius: 10px;
       width: 38px;
       height: 38px;
+      padding: 5px;
     }
 
     img {
-      width: 100%;
-      
+      max-width: 80% !important;
+      max-height: 80% !important;
+
       @include breakpoint-down(md) {
-        width: 100% !important;
+        max-width: 80% !important;
+        max-height: 80% !important;
       }
     }
   }

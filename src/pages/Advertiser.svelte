@@ -1,0 +1,100 @@
+<script>
+  import Faq from '../components/faq/Faq.svelte'
+  import Features from '../components/features/Features.svelte'
+  import FeaturesSecondary from '../components/features_secondary/FeaturesSecondary.svelte'
+  import Footer from '../components/footer/Footer.svelte'
+  import ForWhatSection from '../components/for_what/ForWhat.svelte'
+  import ForYou from '../components/for_you/ForYou.svelte'
+  import Header from '../components/header/Header.svelte'
+  import Hero from '../components/hero/Hero.svelte'
+  import How from '../components/how/How.svelte'
+  import HowSecondary from '../components/how_secondary/HowSecondary.svelte'
+  import NavbarItem from '../components/navbar/NavbarItem.svelte'
+  import Overlay, { toggleOverlay } from '../components/overlay/Overlay.svelte'
+  import Promo from '../components/promo/Promo.svelte'
+  import Results from '../components/results/Results.svelte'
+  import Reviews from '../components/reviews/Reviews.svelte'
+  import Why from '../components/why/Why.svelte'
+  import Button from '../UI/button/Button.svelte'
+  import Link from '../UI/link/Link.svelte'
+
+  const hero = {
+    featuresItems: [
+      {
+        iconUrl: 'src/assets/svg/money-bag-gradient.svg',
+        description: 'Бесплатно',
+      },
+      {
+        iconUrl: 'src/assets/svg/filter-gradient.svg',
+        description: 'Используя удобные фильтры',
+      },
+      {
+        iconUrl: 'src/assets/svg/hand-gradient.svg',
+        description: 'Просто как листать ленту в инстаграм',
+      },
+    ],
+  }
+
+  const toggleMenuMobile = () => {
+    console.log('toggleMenuMobile')
+    if (/Mobi/.test(navigator.userAgent)) {
+      toggleOverlay()
+      document.querySelector('.navbar-toggler').click()
+    }
+  }
+  const handleGooglePlayClick = () => console.log('googlePlayClick')
+  const handleAppStoreClick = () => console.log('appStoreClick')
+</script>
+
+<Overlay />
+<Header loginUrl="/login">
+  <NavbarItem scrolltoEl={'#how'} on:touchstart={toggleMenuMobile}>
+    Это выгодно
+  </NavbarItem>
+  <NavbarItem scrolltoEl={'#for-what'} on:touchstart={toggleMenuMobile}>
+    Для чего нужен сервис
+  </NavbarItem>
+  <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
+    Отзывы
+  </NavbarItem>
+</Header>
+<Hero {...hero} showMobileActions>
+  <div slot="actions">
+    <Button class="hero__content-bloger-btn" outlinePrimary>Установить</Button>
+    <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link>
+  </div>
+  <div slot="mobileActions" class="mt-20 p-2 text-center">
+    <div class="d-flex align-items-center justify-content-center">
+      <Button class="hero__content-bloger-btn" outlinePrimary>Установить</Button
+      >
+      <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link>
+    </div>
+    <p class="hero__content-actions-description mt-10">
+      Установи бесплатное приложение и получи доступ к товарам и услугам, за
+      которые не придется платить
+    </p>
+  </div>
+</Hero>
+<How id="how" />
+<ForWhatSection id="for-what" />
+<HowSecondary />
+<Promo
+  on:googlePlayClick={handleGooglePlayClick}
+  on:appStoreClick={handleAppStoreClick}
+/>
+<Features />
+<Why />
+<Promo
+  on:googlePlayClick={handleGooglePlayClick}
+  on:appStoreClick={handleAppStoreClick}
+/>
+<FeaturesSecondary />
+<ForYou />
+<Results />
+<Reviews id="reviews" />
+<Faq />
+<Promo
+  on:googlePlayClick={handleGooglePlayClick}
+  on:appStoreClick={handleAppStoreClick}
+/>
+<Footer />

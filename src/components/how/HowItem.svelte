@@ -6,9 +6,15 @@
   export let indexImageUrl
   export let title
   export let reverse = false
+  export let active = false
 </script>
 
-<div class="how__item {cls}">
+<div
+  class="how__item {cls}"
+  class:active
+  on:mouseenter={() => (active = true)}
+  on:mouseleave={() => (active = false)}
+>
   <div class="how__item-content row gx-5">
     <div
       class="how__item-content-image-wrapper col-md-6 col-12"
@@ -32,7 +38,9 @@
   </div>
 </div>
 
-<style>
+<style lang="scss" global>
+  @import './HowItem.scss';
+
   .how__item-content-image {
     width: 100%;
   }

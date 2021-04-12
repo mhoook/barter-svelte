@@ -6,15 +6,19 @@
   export let description
 </script>
 
-<div class="for-what__content-item-wrapper {cls}">
-  <div class="for-what__content-item d-flex align-items-center">
-    <div class="for-what__content-item-image">
+<div class="for-what-item__wrapper {cls}">
+  <div class="for-what-item d-flex align-items-center">
+    <div class="for-what-item__image">
       <img src={imageUrl} alt="" />
     </div>
-    <div class="for-what__content-item-text ml-15">
-      <p class="for-what__content-item-description mb-0">
+    <div class="for-what-item__text ml-15">
+      <p class="for-what-item__description mb-0">
         {@html description}
       </p>
     </div>
   </div>
 </div>
+
+<style lang="scss">
+  @import './ForWhatItem.scss';
+</style>

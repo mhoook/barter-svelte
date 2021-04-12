@@ -1,5 +1,5 @@
 .slick-next {
-  background: url("/src/assets/icons/arrow-right.svg") no-repeat center;
+  background: url('/src/assets/icons/arrow-right.svg') no-repeat center;
   background-size: 90%;
   width: 64px;
   height: 64px;
@@ -15,14 +15,15 @@
     content: none !important;
   }
 
-  &:hover, &:focus {
-    background: url("/src/assets/icons/arrow-right.svg") no-repeat center;
+  &:hover,
+  &:focus {
+    background: url('/src/assets/icons/arrow-right.svg') no-repeat center;
     background-size: 90%;
   }
 }
 
 .slick-prev {
-  background: url("/src/assets/icons/arrow-left.svg") no-repeat center;
+  background: url('/src/assets/icons/arrow-left.svg') no-repeat center;
   background-size: 90%;
   width: 64px;
   height: 64px;
@@ -38,8 +39,9 @@
     content: none !important;
   }
 
-  &:hover, &:focus {
-    background: url("/src/assets/icons/arrow-left.svg") no-repeat center;
+  &:hover,
+  &:focus {
+    background: url('/src/assets/icons/arrow-left.svg') no-repeat center;
     background-size: 90%;
   }
 }
@@ -57,8 +59,8 @@
   @include breakpoint-up(md) {
     font-size: 17px;
   }
-  
-  html[data-theme=dark] & {
+
+  html[data-theme='dark'] & {
     color: $text-color--primary-gradient;
   }
 }

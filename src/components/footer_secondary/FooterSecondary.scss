@@ -1,0 +1,127 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.footer-secondary {
+  padding-top: $padding--section-small;
+  padding-bottom: $padding--section-small;
+
+  &__navigation {
+    &-link {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      color: $text-color--main;
+      text-decoration: none;
+
+      &::after {
+        content: none;
+      }
+
+      @include breakpoint-down(md) {
+        font-size: 14px;
+      }
+    }
+    &-item {
+      margin-top: 20px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+
+      @include breakpoint-down(md) {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__menu {
+    &-title {
+      color: $text-color--main;
+      margin-bottom: 20px;
+
+      @include breakpoint-down(md) {
+        margin-bottom: 5px;
+      }
+
+      html[data-theme='dark'] & {
+        color: $text-color--light !important;
+      }
+    }
+    &-items {
+      padding-left: 0;
+      list-style: none;
+    }
+    &-item {
+      &:not(:first-child) {
+        padding-top: 10px;
+
+        @include breakpoint-down(md) {
+          padding-top: 3px;
+        }
+      }
+
+      a {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 140%;
+        color: $text-color--muted;
+        text-decoration: none;
+
+        @include breakpoint-down(md) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    height: 50px;
+    @include breakpoint-down(md) {
+      width: 120px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &-brand {
+      @include breakpoint-down(md) {
+        margin: 0;
+      }
+    }
+
+    &-wrapper {
+      @include breakpoint-down(md) {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+
+  &__social-icons {
+    @include breakpoint-down(md) {
+      margin-top: 10px !important;
+    }
+    &-wrapper {
+      @include breakpoint-down(md) {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__copyright {
+    color: $text-color--muted;
+
+    &-wrapper {
+      text-align: center;
+      @include breakpoint-down(md) {
+        margin-top: 20px;
+      }
+    }
+
+    @include breakpoint-down(md) {
+      padding-top: 9px;
+    }
+  }
+}

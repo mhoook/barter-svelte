@@ -1,0 +1,15 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.for-what-item {
+  &__description {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    max-width: 385px;
+
+    @include breakpoint-down(md) {
+      font-size: 14px;
+    }
+  }
+}

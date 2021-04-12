@@ -2,34 +2,21 @@
   let cls = ''
 
   export { cls as class }
-
-  const items = [
-    {
-      iconUrl: 'src/assets/icons/money.svg',
-      description: 'Без бюджета',
-    },
-    {
-      iconUrl: 'src/assets/icons/easy.svg',
-      description: 'Проще чем разместить объявление на авито',
-    },
-    {
-      iconUrl: 'src/assets/icons/money.svg',
-      description: 'Без бюджета',
-    },
-    {
-      iconUrl: 'src/assets/icons/exercise.svg',
-      description: 'В 10 раз быстрее, чем искать самостоятельно',
-    },
-  ]
+  export let items = []
 </script>
 
-<div class="hero__features-wrapper {cls}">
-  <div class="hero__features-items row">
-    {#each items as item}
-      <div class="hero__features-item-wrapper col-auto">
-        <div class="hero__features-item d-flex align-items-center">
+<div class="hero-features__wrapper {cls}">
+  <div class="hero-features__items row">
+    {#each items as item, i}
+      <div
+        class="hero-features__item-wrapper d-flex align-items-center col-auto"
+      >
+        <div
+          class="hero-features__item d-flex align-items-center"
+          class:ml-40={i > 0}
+        >
           <img src={item.iconUrl} alt="" />
-          <label class="hero__features-item-description ml-10" for="">
+          <label class="hero-features__item-description ml-10" for="">
             {item.description}
           </label>
         </div>
@@ -37,3 +24,7 @@
     {/each}
   </div>
 </div>
+
+<style lang="scss">
+  @import './HeroFeatures.scss';
+</style>

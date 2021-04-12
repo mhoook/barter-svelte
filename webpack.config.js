@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const sveltePreprocess = require('svelte-preprocess')
 const path = require('path')
 
 const mode = process.env.NODE_ENV || 'development'
@@ -8,11 +9,12 @@ const prod = mode === 'production'
 
 module.exports = {
   entry: {
-    'build/bundle': ['./src/main.js'],
+    bundle: ['./src/main.js'],
   },
   resolve: {
     alias: {
       svelte: path.dirname(require.resolve('svelte/package.json')),
+      '@': path.join(__dirname, '/src'),
     },
     extensions: ['.mjs', '.js', '.svelte'],
     mainFields: ['svelte', 'browser', 'module', 'main'],
@@ -37,6 +39,9 @@ module.exports = {
             compilerOptions: {
               dev: !prod,
             },
+            preprocess: sveltePreprocess({
+              postcss: true,
+            }),
             emitCss: false,
             hotReload: !prod,
           },
@@ -44,7 +49,18 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
+        exclude: /svelte\.\d+\.css/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        include: /svelte\.\d+\.css/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+          'postcss-loader',
+        ],
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/i,

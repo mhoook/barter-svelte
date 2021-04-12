@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.features-item {
+  &__content {
+    &-title {
+      text-transform: uppercase;
+    }
+  }
+  &__title {
+    font-weight: 500;
+  }
+  &__description {
+    margin-bottom: 0;
+  }
+}

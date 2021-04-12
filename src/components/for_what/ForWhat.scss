@@ -1,0 +1,62 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.for-what {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-lg;
+
+  @include breakpoint-down(md) {
+    margin-top: 130px;
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+
+    &-image {
+      position: absolute;
+      top: -80px;
+      height: 475px;
+
+      @include breakpoint-down(md) {
+        height: auto;
+        left: calc(50% - 62.5px);
+        width: 125px;
+        top: -40px;
+      }
+
+      &-overlay {
+        position: absolute;
+        width: 50vw;
+        height: 100%;
+        left: -30vw;
+        background: $background-color--primary-gradient-horizontal;
+        border-radius: 10px;
+
+        @include breakpoint-down(md) {
+          width: 100vw;
+          left: 0;
+        }
+      }
+
+      &-wrapper {
+        position: relative;
+
+        @include breakpoint-down(md) {
+          height: 175px;
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+}

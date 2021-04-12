@@ -1,0 +1,70 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.link {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+
+  color: $text-color--main;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 110%;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    content: ' ';
+    width: 100%;
+    border-bottom: 2px solid $text-color--main-paragraph;
+    @include breakpoint-down(md) {
+      border-bottom: 1px solid $text-color--main-paragraph;
+    }
+  }
+
+  &--nostyle {
+    text-decoration: none !important;
+  }
+
+  &:hover {
+    color: $text-color--muted;
+
+    &:after {
+      border-color: $text-color--muted;
+    }
+  }
+
+  @include breakpoint-down(md) {
+    font-size: $font-size--sm-mobile;
+  }
+
+  &--light {
+    color: $text-color--light;
+
+    &:hover {
+      color: $text-color--light;
+    }
+  }
+
+  &--muted {
+    color: $text-color--muted;
+
+    &:hover {
+      color: $color--primary;
+    }
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--underline {
+    text-decoration: underline;
+  }
+}

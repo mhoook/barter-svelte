@@ -1,0 +1,8 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.header {
+  position: relative;
+  z-index: 9;
+  background: white;
+}

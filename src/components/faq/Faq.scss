@@ -1,0 +1,70 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.faq {
+  width: 100% !important;
+  overflow-x: hidden !important;
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  html[data-theme='dark'] & {
+    color: $text-color--light !important;
+  }
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+  }
+
+  &__items {
+    width: 800px;
+
+    @include breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -100px;
+
+    &-wrapper {
+      position: relative;
+      width: 350px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    &-header {
+      background: #f5f5f5;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      &-button {
+        font-weight: 600;
+        font-size: 22px;
+        border: none !important;
+        text-align: left;
+
+        @include breakpoint-down(md) {
+          font-size: 14px;
+          padding: 8px;
+          padding-right: 12px;
+        }
+      }
+    }
+  }
+}

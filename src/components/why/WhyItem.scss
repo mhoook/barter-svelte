@@ -1,0 +1,109 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.why-item {
+  &--hide-line &__content-wrapper::after {
+    content: none;
+  }
+
+  @include breakpoint-down(md) {
+    &:not(:first-child) {
+      @include breakpoint-down(md) {
+        margin-top: 65px !important;
+      }
+    }
+  }
+
+  &__content {
+    &-image {
+      &-wrapper {
+        position: relative;
+      }
+
+      position: absolute;
+      top: 30px;
+      right: 0;
+
+      @include breakpoint-down(md) {
+        top: -60px;
+        right: 0;
+        width: 200px;
+        z-index: -1;
+        opacity: 0.7;
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+
+      &::after {
+        content: ' ';
+        position: absolute;
+        top: 40px;
+        right: -65px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        border-right: 2px solid #000000;
+        border-top: 2px solid #000000;
+
+        @include breakpoint-down(md) {
+          content: none;
+        }
+      }
+
+      &.order-md-2 {
+        &::after {
+          right: auto;
+          left: calc(-100% + 65px);
+          border-right: none;
+          border-left: 2px solid #000000;
+          border-top: 2px solid #000000;
+
+          @include breakpoint-down(md) {
+            content: none;
+          }
+        }
+      }
+    }
+    &-title {
+      max-width: 360px;
+    }
+    &-description {
+      max-width: 560px;
+
+      @include breakpoint-down(md) {
+        margin-top: 0 !important;
+      }
+    }
+    &-index {
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 110%;
+      color: white;
+
+      @include breakpoint-down(md) {
+        font-size: 25px;
+      }
+
+      &-card {
+        position: relative;
+        z-index: 9;
+        border-radius: 15px;
+        box-shadow: none;
+        width: 100px !important;
+
+        @include breakpoint-down(md) {
+          border-radius: 7px;
+          width: 70px !important;
+        }
+
+        .card-body {
+          @include breakpoint-down(md) {
+            padding: 7px 14px;
+          }
+        }
+      }
+    }
+  }
+}

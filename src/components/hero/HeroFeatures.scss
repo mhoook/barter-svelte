@@ -1,0 +1,39 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.hero-features {
+  &__wrapper {
+    @include breakpoint-up(md) {
+      margin-top: 20px;
+    }
+  }
+  &__item {
+    max-width: 280px;
+
+    @include breakpoint-down(md) {
+      margin-left: 0 !important;
+      margin-top: 5px;
+      max-width: 180px;
+    }
+
+    &-wrapper {
+      @include breakpoint-down(md) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-description {
+      @include breakpoint-down(md) {
+        font-size: 10px;
+        line-height: 140%;
+      }
+    }
+
+    img {
+      @include breakpoint-down(md) {
+        width: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.how-main {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-lg;
+  }
+
+  html[data-theme='dark'] & {
+    color: $text-color--light !important;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      @include breakpoint-down(md) {
+        margin-top: 100px;
+      }
+    }
+
+    &-content {
+      text-align: center;
+      position: relative;
+
+      &-wrapper {
+        position: relative;
+        height: 113px;
+        margin-top: 200px;
+
+        @include breakpoint-down(md) {
+          margin-top: 40px;
+          height: auto;
+        }
+      }
+
+      &-index {
+        position: absolute;
+        bottom: 0;
+
+        @include breakpoint-down(md) {
+          position: relative;
+        }
+      }
+
+      &-title {
+        position: absolute;
+        text-align: left;
+        left: 0;
+        top: 85px;
+        margin: 0;
+        line-height: 140%;
+        text-transform: uppercase;
+
+        @include breakpoint-down(md) {
+          font-size: 16px;
+          position: relative;
+          top: auto;
+          left: auto;
+          max-width: 300px;
+          text-align: center;
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &-description {
+      margin-bottom: 0;
+      max-width: 415px;
+      margin: 0 auto;
+
+      @include breakpoint-down(md) {
+        max-width: 80vw;
+      }
+    }
+  }
+
+  &__tryit-btn {
+    width: 300px;
+  }
+}

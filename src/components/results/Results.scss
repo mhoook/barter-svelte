@@ -1,0 +1,91 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.results {
+  padding-top: $padding--section-default;
+  padding-bottom: $padding--section-default;
+
+  @include breakpoint-down(md) {
+    padding-top: $padding--section-default-mobile;
+    padding-bottom: $padding--section-default-mobile;
+  }
+
+  html[data-theme='dark'] & {
+    color: $text-color--light !important;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+
+    @include breakpoint-down(md) {
+      width: 298px;
+    }
+  }
+
+  &__content {
+    margin-top: $margin--section-content-default;
+
+    @include breakpoint-down(md) {
+      margin-top: $margin--section-content-default-mobile;
+    }
+  }
+
+  &__items {
+    max-width: 720px;
+
+    @include breakpoint-down(md) {
+      width: 80%;
+    }
+  }
+
+  &__item {
+    &-wrapper {
+      padding: 15px;
+    }
+
+    &-image {
+      img {
+        @include breakpoint-down(md) {
+          width: 112px;
+        }
+      }
+    }
+
+    &-content {
+      &-text {
+        @include breakpoint-down(md) {
+          margin-top: 20px !important;
+        }
+      }
+      &-author {
+        @include breakpoint-down(md) {
+          margin-top: 35px !important;
+        }
+      }
+      &-features {
+        &-title {
+          @include breakpoint-down(md) {
+            margin-top: 35px !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__filter {
+    @include breakpoint-down(md) {
+      padding: 20px;
+    }
+    &-items {
+      @include breakpoint-down(md) {
+        margin-top: 30px !important;
+      }
+    }
+  }
+
+  &__actions {
+    margin-top: 20px !important;
+  }
+}

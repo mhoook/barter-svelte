@@ -1,0 +1,110 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.button {
+  &--login {
+    margin-top: 2px;
+  }
+}
+
+.btn {
+  border-radius: 10px;
+
+  @include breakpoint-down(md) {
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
+
+.btn-outline-light {
+  padding: 8px 25px;
+  border-radius: 15px;
+
+  @include breakpoint-down(md) {
+    font-size: 8px;
+  }
+}
+
+.btn-outline-primary {
+  border-radius: 10px;
+  padding: 25px 78px;
+  color: $text-color--main;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(180deg, #e31266 0%, #f8493c 48.75%, #f4943e 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset !important;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 110%;
+
+  transition: all 300ms;
+
+  &:hover {
+    color: $text-color--main;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      linear-gradient(180deg, #e31266 0%, #f8493c 48.75%, #f4943e 100%);
+    border-color: #f8493c;
+  }
+
+  @include breakpoint-down(md) {
+    border-radius: 5px;
+    border: solid 2px transparent;
+    font-size: 12px;
+    line-height: 110%;
+    padding: 12px 31px;
+  }
+}
+
+.btn-light {
+  border-radius: 10px;
+  padding: 20px;
+  color: white !important;
+  border: solid 2px white;
+  background: transparent;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 110%;
+
+  transition: all 300ms;
+
+  &:hover {
+    background: transparent;
+  }
+
+  @include breakpoint-down(md) {
+    padding: 3px 7px !important;
+    border: solid 1px white;
+  }
+}
+
+.btn-primary {
+  background: $background-color--primary-gradient;
+  background-color: $background-color--primary-gradient;
+  border: none;
+  color: $text-color--light;
+  padding: 20px 80px;
+}
+
+.btn-sm {
+  border-radius: 15px;
+  font-size: 14px;
+  border: solid 2px transparent;
+  padding: 7px 35px;
+}
+
+.btn-light {
+  text-align: center;
+  color: $text-color--main;
+}

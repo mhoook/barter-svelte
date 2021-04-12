@@ -1,0 +1,26 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.hero-actions {
+  @include breakpoint-down(md) {
+    text-align: center;
+    margin-top: 25px;
+  }
+  margin-top: 50px;
+
+  @include breakpoint-down(md) {
+    margin-top: 0;
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+
+  &__more-link {
+    margin-left: 50px;
+
+    @include breakpoint-down(md) {
+      margin-left: 15px !important;
+    }
+  }
+}

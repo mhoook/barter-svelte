@@ -12,3 +12,7 @@
     <HowItem class="col-12" reverse={i % 2} {...item} />
   {/each}
 </div>
+
+<style lang="scss">
+  @import './HowItemsList.scss';
+</style>
