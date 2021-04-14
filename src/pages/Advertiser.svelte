@@ -14,10 +14,12 @@
   import Promo from '../components/promo/Promo.svelte'
   import Results from '../components/results/Results.svelte'
   import Reviews from '../components/reviews/Reviews.svelte'
+  import SlidePhone from '../components/slide_phone/SlidePhone.svelte'
   import Why from '../components/why/Why.svelte'
   import Button from '../UI/button/Button.svelte'
   import Link from '../UI/link/Link.svelte'
 
+  const isMobile = /Mobi/.test(navigator.userAgent)
   const hero = {
     featuresItems: [
       {
@@ -37,7 +39,7 @@
 
   const toggleMenuMobile = () => {
     console.log('toggleMenuMobile')
-    if (/Mobi/.test(navigator.userAgent)) {
+    if (isMobile) {
       toggleOverlay()
       document.querySelector('.navbar-toggler').click()
     }
@@ -76,12 +78,24 @@
   </div>
 </Hero>
 <How id="how" />
-<ForWhatSection id="for-what" />
-<HowSecondary />
-<Promo
-  on:googlePlayClick={handleGooglePlayClick}
-  on:appStoreClick={handleAppStoreClick}
-/>
+{#if isMobile}
+  <ForWhatSection id="for-what" />
+  <HowSecondary />
+  <Promo
+    on:googlePlayClick={handleGooglePlayClick}
+    on:appStoreClick={handleAppStoreClick}
+  />
+{:else}
+  <SlidePhone paddingBottom={140}>
+    <ForWhatSection imageUrl={null} id="for-what" />
+    <HowSecondary />
+    <Promo
+      contentImageUrl={null}
+      on:googlePlayClick={handleGooglePlayClick}
+      on:appStoreClick={handleAppStoreClick}
+    />
+  </SlidePhone>
+{/if}
 <Features />
 <Why />
 <Promo

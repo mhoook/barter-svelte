@@ -3,6 +3,7 @@
 
   export let id
   export let title = 'ДЛЯ ЧЕГО НУЖЕН НАШ СЕРВИС'
+  export let imageUrl = 'src/assets/images/hero-mobile.png'
   export let items = [
     {
       imageUrl: 'src/assets/icons/account-circle.svg',
@@ -28,11 +29,9 @@
           class="for-what__content-image-wrapper col-md-6 col-12 order-1 order-md-0"
         >
           <div class="for-what__content-image-overlay" />
-          <img
-            class="for-what__content-image"
-            src="src/assets/images/hero-mobile.png"
-            alt=""
-          />
+          {#if imageUrl}
+            <img class="for-what__content-image" src={imageUrl} alt="" />
+          {/if}
         </div>
         <ForWhatItemsList class="col-md-6 col-12 order-0 order-md-1" {items} />
       </div>

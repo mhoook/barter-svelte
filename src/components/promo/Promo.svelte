@@ -26,7 +26,9 @@
         <div
           class="promo__content-image-wrapper col-md-6 col-3 d-flex justify-content-center"
         >
-          <img class="promo__content-image" src={contentImageUrl} alt="" />
+          {#if contentImageUrl}
+            <img class="promo__content-image" src={contentImageUrl} alt="" />
+          {/if}
         </div>
         <div class="col-md-6 col-9 d-flex align-items-center">
           <div class="promo__content-text-wrapper">
