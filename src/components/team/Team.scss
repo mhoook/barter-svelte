@@ -55,6 +55,7 @@
 
     &-image {
       img {
+        margin: 0 auto;
         @include breakpoint-down(md) {
           max-width: 252px;
         }

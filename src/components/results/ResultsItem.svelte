@@ -8,27 +8,27 @@
   export { cls as class }
   export let featuresItems = [
     {
-      imageUrl: 'src/assets/icons/user-light.svg',
+      imageUrl: 'src/assets/svg/account.svg',
       description: 'Участвовало 150 блогеров',
     },
     {
-      imageUrl: 'src/assets/icons/card-light.svg',
+      imageUrl: 'src/assets/svg/card-in-hand.svg',
       description: 'Предоставил товаров/услуг на 150 000 рублей',
     },
     {
-      imageUrl: 'src/assets/icons/discount-light.svg',
+      imageUrl: 'src/assets/svg/promo-ticket.svg',
       description: 'Скидка подписчикам 40%',
     },
     {
-      imageUrl: 'src/assets/icons/instagram-light.svg',
+      imageUrl: 'src/assets/svg/instagram.svg',
       description: 'Привлечено 300 клиентов',
     },
     {
-      imageUrl: 'src/assets/icons/money-light.svg',
+      imageUrl: 'src/assets/svg/money-bag.svg',
       description: 'Выручка 450 000 рублей',
     },
     {
-      imageUrl: 'src/assets/icons/coins-light.svg',
+      imageUrl: 'src/assets/svg/coins.svg',
       description: 'Прибыль +120 000 рублей',
     },
   ]

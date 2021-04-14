@@ -21,6 +21,13 @@
 
     &-image {
       &-wrapper {
+        min-width: 33px !important;
+        width: 33px !important;
+        height: 33px !important;
+        img {
+          max-width: 90%;
+          max-height: 90%;
+        }
         @include breakpoint-down(md) {
           min-width: fit-content !important;
         }

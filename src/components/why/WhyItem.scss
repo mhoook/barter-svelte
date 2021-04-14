@@ -2,6 +2,8 @@
 @import '../../styles/variables';
 
 .why-item {
+  position: relative;
+
   &--hide-line &__content-wrapper::after {
     content: none;
   }
@@ -29,7 +31,6 @@
         right: 0;
         width: 200px;
         z-index: -1;
-        opacity: 0.7;
       }
     }
 

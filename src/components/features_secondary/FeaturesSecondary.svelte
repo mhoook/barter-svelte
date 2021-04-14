@@ -5,35 +5,35 @@
   export let title = 'СФЕРЫ ДЛЯ КОТОРЫХ ХОРОШО ПОДХОДИТ СЕРВИС'
   export let items = [
     {
-      imageUrl: 'src/assets/icons/lotus.svg',
+      imageUrl: 'src/assets/svg/lotus.svg',
       description: 'Красота и здоровье',
     },
     {
-      imageUrl: 'src/assets/icons/home.svg',
+      imageUrl: 'src/assets/svg/home.svg',
       description: 'Товары для дома',
     },
     {
-      imageUrl: 'src/assets/icons/shopping-bag.svg',
+      imageUrl: 'src/assets/svg/bag.svg',
       description: 'Магазины одежды и обуви',
     },
     {
-      imageUrl: 'src/assets/icons/children.svg',
+      imageUrl: 'src/assets/svg/child.svg',
       description: 'Товары для детей',
     },
     {
-      imageUrl: 'src/assets/icons/chinese-rice.svg',
+      imageUrl: 'src/assets/svg/restauraunt.svg',
       description: 'Кафе, рестораны и доставка еды',
     },
     {
-      imageUrl: 'src/assets/icons/weight.svg',
+      imageUrl: 'src/assets/svg/weight.svg',
       description: 'Фитнес залы и спорт товары',
     },
     {
-      imageUrl: 'src/assets/icons/popcorn.svg',
+      imageUrl: 'src/assets/svg/cupcacke.svg',
       description: 'Развлечения и образ жизни',
     },
     {
-      imageUrl: 'src/assets/icons/plus.svg',
+      imageUrl: 'src/assets/svg/plus-circle.svg',
       description: ' Другие офлайн бизнесы',
     },
   ]

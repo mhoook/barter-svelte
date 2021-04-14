@@ -1,4 +1,5 @@
 <script>
+  export let el
   export let imageUrl
   export let indexImageUrl
   export let lightIndexImageUrl
@@ -6,13 +7,19 @@
   export let description
   export let reverse
   export let active = false
+  export let scrollY
+
+  $: if (el && scrollY) {
+    active =
+      scrollY > el.offsetTop - window.innerHeight / 2 &&
+      scrollY < el.offsetTop + window.innerHeight / 4
+  }
 </script>
 
 <div
   class="{$$restProps.class} how-blogger__item col-12"
   class:active
-  on:mouseenter={() => (active = true)}
-  on:mouseleave={() => (active = false)}
+  bind:this={el}
 >
   <div class="how-blogger__item-content row gx-5">
     <div

@@ -15,7 +15,6 @@
         {
           breakpoint: 800,
           settings: {
-            adaptiveHeight: true,
             arrows: false,
             slidesToShow: 1,
             slidesToScroll: 1,

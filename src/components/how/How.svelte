@@ -7,17 +7,20 @@
     {
       imageUrl: 'src/assets/svg/takeout-boxes.svg',
       indexImageUrl: 'src/assets/svg/01_gray.svg',
+      darkIndexImageUrl: 'src/assets/svg/01_gray_dark.svg',
       title: 'У микроблогеров более целевая и качественная аудитория',
     },
     {
       imageUrl: 'src/assets/svg/make-it-rain.svg',
       indexImageUrl: 'src/assets/svg/02_gray.svg',
+      darkIndexImageUrl: 'src/assets/svg/02_gray_dark.svg',
       title:
         'Не нужен бюджет на рекламу, расходы равны себестоимости товаров или услуг',
     },
     {
       imageUrl: 'src/assets/svg/product-photo.svg',
       indexImageUrl: 'src/assets/svg/03_gray.svg',
+      darkIndexImageUrl: 'src/assets/svg/03_gray_dark.svg',
       title:
         'Искренняя рекомендация товара или услуги эффективнее рекламы за деньги',
     },
