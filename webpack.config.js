@@ -7,7 +7,7 @@ const path = require('path')
 const mode = process.env.NODE_ENV || 'development'
 const prod = mode === 'production'
 
-module.exports = {
+module.exports = env =>  ({
   entry: {
     bundle: ['./src/main.js'],
   },
@@ -85,6 +85,7 @@ module.exports = {
       filename: '[name].[hash].css',
     }),
     new HtmlWebpackPlugin({
+      base: env.server&&'/landings/barter/dist/index.html'||'',
       template: path.join(__dirname, './public/index.html'),
     }),
     new CopyWebpackPlugin({
@@ -98,4 +99,4 @@ module.exports = {
   devServer: {
     hot: true,
   },
-}
+})

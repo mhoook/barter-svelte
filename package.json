@@ -36,6 +36,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
+    "build-server": "cross-env NODE_ENV=production webpack --env=server='server'",
     "dev": "webpack serve --content-base public"
   },
   "dependencies": {
