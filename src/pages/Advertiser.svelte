@@ -49,7 +49,7 @@
 </script>
 
 <Overlay />
-<Header loginUrl="/app/role=1">
+<Header loginUrl="/app/?role=1">
   <NavbarItem scrolltoEl={'#how'} on:touchstart={toggleMenuMobile}>
     Это выгодно
   </NavbarItem>
@@ -62,12 +62,12 @@
 </Header>
 <Hero {...hero} showMobileActions>
   <div slot="actions">
-    <Button class="hero__content-bloger-btn" href="/app?role=1" noroute outlinePrimary>Опубликовать предложение</Button>
+    <Button class="hero__content-bloger-btn" href="/app/?role=1" noroute outlinePrimary>Опубликовать предложение</Button>
     <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
   </div>
   <div slot="mobileActions" class="mt-20 p-2 text-center">
     <div class="d-flex align-items-center justify-content-center">
-      <Button class="hero__content-bloger-btn" href="/app?role=1" noroute outlinePrimary>Опубликовать предложение</Button
+      <Button class="hero__content-bloger-btn" href="/app/?role=1" noroute outlinePrimary>Опубликовать предложение</Button
       >
       <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
     </div>

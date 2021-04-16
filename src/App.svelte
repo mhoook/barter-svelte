@@ -22,7 +22,7 @@
 <div use:links>
   <Router {url}>
     <Route path="/" component={Main} />
-    <Route path="blogger" component={Blogger} />
-    <Route path="advertiser" component={Advertiser} />
+    <Route path="/blogger" component={Blogger} />
+    <Route path="/advertiser" component={Advertiser} />
   </Router>
 </div>

@@ -42,10 +42,10 @@
 </Header>
 <Hero {...hero}>
   <div class="d-flex align-items-center mb-100" slot="actions">
-    <Button class="hero__content-bloger-btn" href="blogger" outlinePrimary>
+    <Button class="hero__content-bloger-btn" href="/blogger" outlinePrimary>
       Я блогер
     </Button>
-    <Button href="advertiser"
+    <Button href="/advertiser"
       class="hero__content-bloger-btn ml-40"
       outlinePrimary
     >

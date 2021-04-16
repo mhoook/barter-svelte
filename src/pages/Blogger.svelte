@@ -83,7 +83,7 @@
 </script>
 
 <Overlay />
-<Header loginUrl="/app/role=0">
+<Header loginUrl="/app?role=0">
   <NavbarItem scrolltoEl={'#how'} on:touchstart={toggleMenuMobile}>
     Как это работает
   </NavbarItem>
