@@ -76,7 +76,7 @@
               <ul class="footer-secondary__menu-items">
                 {#each menuItem.items as item}
                   <li class="footer-secondary__menu-item">
-                    <a href={item.url} alt=""> {item.title} </a>
+                    <a href={item.url} noroute alt=""> {item.title} </a>
                   </li>
                 {/each}
               </ul>

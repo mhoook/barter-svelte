@@ -3,6 +3,7 @@
   import Features from '../components/features/Features.svelte'
   import FeaturesSecondary from '../components/features_secondary/FeaturesSecondary.svelte'
   import Footer from '../components/footer/Footer.svelte'
+  import FooterSecondary from '../components/footer_secondary/FooterSecondary.svelte'
   import ForWhatSection from '../components/for_what/ForWhat.svelte'
   import ForYou from '../components/for_you/ForYou.svelte'
   import Header from '../components/header/Header.svelte'
@@ -24,15 +25,15 @@
     featuresItems: [
       {
         iconUrl: 'src/assets/svg/money-bag-gradient.svg',
-        description: 'Бесплатно',
+        description: 'Без бюджета',
       },
       {
         iconUrl: 'src/assets/svg/filter-gradient.svg',
-        description: 'Используя удобные фильтры',
+        description: 'Проще чем разместить объявление на авито',
       },
       {
         iconUrl: 'src/assets/svg/hand-gradient.svg',
-        description: 'Просто как листать ленту в инстаграм',
+        description: 'В 10 раз быстрее, чем искать самостоятельно',
       },
     ],
   }
@@ -48,66 +49,66 @@
 </script>
 
 <Overlay />
-<Header loginUrl="/login">
+<Header loginUrl="/app/role=1">
   <NavbarItem scrolltoEl={'#how'} on:touchstart={toggleMenuMobile}>
     Это выгодно
   </NavbarItem>
   <NavbarItem scrolltoEl={'#for-what'} on:touchstart={toggleMenuMobile}>
     Для чего нужен сервис
   </NavbarItem>
-  <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
+<!--   <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
     Отзывы
-  </NavbarItem>
+  </NavbarItem> -->
 </Header>
 <Hero {...hero} showMobileActions>
   <div slot="actions">
-    <Button class="hero__content-bloger-btn" outlinePrimary>Установить</Button>
-    <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link>
+    <Button class="hero__content-bloger-btn" href="/app?role=1" noroute outlinePrimary>Опубликовать предложение</Button>
+    <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
   </div>
   <div slot="mobileActions" class="mt-20 p-2 text-center">
     <div class="d-flex align-items-center justify-content-center">
-      <Button class="hero__content-bloger-btn" outlinePrimary>Установить</Button
+      <Button class="hero__content-bloger-btn" href="/app?role=1" noroute outlinePrimary>Опубликовать предложение</Button
       >
-      <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link>
+      <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
     </div>
-    <p class="hero__content-actions-description mt-10">
+<!--     <p class="hero__content-actions-description mt-10">
       Установи бесплатное приложение и получи доступ к товарам и услугам, за
       которые не придется платить
-    </p>
+    </p> -->
   </div>
 </Hero>
 <How id="how" />
 {#if $isMobile}
   <ForWhatSection id="for-what" />
   <HowSecondary />
-  <Promo
+<!--   <Promo
     on:googlePlayClick={handleGooglePlayClick}
     on:appStoreClick={handleAppStoreClick}
-  />
+  /> -->
 {:else}
   <SlidePhone paddingBottom={140}>
     <ForWhatSection imageUrl={null} id="for-what" />
     <HowSecondary />
-    <Promo
+<!--     <Promo
       contentImageUrl={null}
       on:googlePlayClick={handleGooglePlayClick}
       on:appStoreClick={handleAppStoreClick}
-    />
+    /> -->
   </SlidePhone>
 {/if}
 <Features />
 <Why />
-<Promo
+<!-- <Promo
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
-/>
+/> -->
 <FeaturesSecondary />
 <ForYou />
-<Results />
-<Reviews id="reviews" />
-<Faq />
-<Promo
+<!-- <Results /> -->
+<!-- <Reviews id="reviews" /> -->
+<!-- <Faq /> -->
+<!-- <Promo
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
-/>
-<Footer />
+/> -->
+<FooterSecondary />

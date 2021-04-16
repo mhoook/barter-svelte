@@ -4,6 +4,7 @@
   import Faq from '../components/faq/Faq.svelte'
   import FeaturesSecondary from '../components/features_secondary/FeaturesSecondary.svelte'
   import Footer from '../components/footer/Footer.svelte'
+  import FooterSecondary from '../components/footer_secondary/FooterSecondary.svelte'
   import FooterMenuItem from '../components/footer/FooterMenuItem.svelte'
   import Header from '../components/header/Header.svelte'
   import Hero from '../components/hero/Hero.svelte'
@@ -19,6 +20,7 @@
   const hero = {
     imageUrl: 'src/assets/images/hero2.png',
     title: 'Сотни товаров и услуг за рекомендацию в инстаграм',
+    description: 'Бесплатно получи доступ к товарам и услугам, за которые не придется платить',
     featuresItems: [
       {
         iconUrl: 'src/assets/svg/money-bag-gradient.svg',
@@ -81,32 +83,32 @@
 </script>
 
 <Overlay />
-<Header loginUrl="/login">
+<Header loginUrl="/app/role=0">
   <NavbarItem scrolltoEl={'#how'} on:touchstart={toggleMenuMobile}>
     Как это работает
   </NavbarItem>
-  <NavbarItem scrolltoEl={'#clients'} on:touchstart={toggleMenuMobile}>
+<!--   <NavbarItem scrolltoEl={'#clients'} on:touchstart={toggleMenuMobile}>
     В сервисе работают
-  </NavbarItem>
-  <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
+  </NavbarItem> -->
+<!--   <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
     Отзывы
-  </NavbarItem>
+  </NavbarItem> -->
 </Header>
 <Hero {...hero} showMobileActions>
   <div slot="actions">
-    <Button class="hero__content-bloger-btn" outlinePrimary>Установить</Button>
-    <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link>
+    <Button class="hero__content-bloger-btn" href="/app?role=0" noroute outlinePrimary>Получить предложение</Button>
+    <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
   </div>
   <div slot="mobileActions" class="mt-20 p-2 text-center">
     <div class="d-flex align-items-center justify-content-center">
-      <Button class="hero__content-bloger-btn" outlinePrimary>Установить</Button
+      <Button class="hero__content-bloger-btn" href="/app?role=0" noroute outlinePrimary>Получить предложение</Button
       >
-      <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link>
+      <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
     </div>
-    <p class="hero__content-actions-description mt-10">
+   <!--  <p class="hero__content-actions-description mt-10">
       Установи бесплатное приложение и получи доступ к товарам и услугам, за
       которые не придется платить
-    </p>
+    </p> -->
   </div>
 </Hero>
 <FeaturesSecondary
@@ -115,17 +117,18 @@
   background-position: 85% 100%;"
   {...featuresSecondary}
 />
-<Promo
+<!-- <Promo
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
-/>
+/> -->
 <HowBlogger id="how" />
-<Clients id="clients" />
-<Reviews id="reviews" />
-<Faq imageUrl="src/assets/svg/discover-draw-blogger.svg" />
-<Footer>
+<!-- <Clients id="clients" />
+<Reviews id="reviews" /> -->
+<!-- <Faq imageUrl="src/assets/svg/discover-draw-blogger.svg" /> -->
+<!-- <Footer>
   <FooterMenuItem scrolltoEl={'#how'}>Как это работает</FooterMenuItem>
   <FooterMenuItem scrolltoEl={'#clients'}>В сервисе работают</FooterMenuItem>
   <FooterMenuItem scrolltoEl={'#reviews'}>Отзывы</FooterMenuItem>
   <FooterMenuItem url="/policy">Политика конфиденциальности</FooterMenuItem>
-</Footer>
+</Footer> -->
+<FooterSecondary />

@@ -3,6 +3,7 @@
   export let primary
   export let outlinePrimary
   export let light
+  export let noroute
 </script>
 
 <a
@@ -11,6 +12,7 @@
   class:btn-primary={primary}
   class:btn-light={light}
   {href}
+  noroute={noroute}
   on:click
 >
   <slot />

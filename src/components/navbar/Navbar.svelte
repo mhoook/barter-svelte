@@ -1,7 +1,7 @@
 <script>
   import Button from '../../UI/button/Button.svelte'
   import { toggleOverlay } from '../overlay/Overlay.svelte'
-
+  import { Link } from 'svelte-routing'
   export let loginUrl
   export let items = []
 
@@ -10,14 +10,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="navbar__container container">
-    <a class="navbar__logo-brand navbar-brand" href="#!">
+    <Link class="navbar__logo-brand navbar-brand" to="/">
       <img
         class="navbar__logo"
         src="src/assets/images/logo.png"
         alt=""
         height="50"
       />
-    </a>
+    </Link>
     <button
       class="navbar-toggler"
       type="button"
@@ -55,6 +55,7 @@
           <slot name="login">
             <Button
               href={loginUrl}
+              noroute
               class="navbar__login-button btn-sm"
               outlinePrimary
             >

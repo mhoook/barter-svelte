@@ -10,7 +10,7 @@
   import Team from '../components/team/Team.svelte'
   import { isMobile } from '../stores'
   import Button from '../UI/button/Button.svelte'
-
+  import { Link } from 'svelte-routing'
   const hero = {
     imageUrl: 'src/assets/images/hero3.png',
     title: 'Сервис для бартера между блогерами и бизнесом',
@@ -42,11 +42,10 @@
 </Header>
 <Hero {...hero}>
   <div class="d-flex align-items-center mb-100" slot="actions">
-    <Button href="/app/?role=0" class="hero__content-bloger-btn" outlinePrimary>
+    <Button class="hero__content-bloger-btn" href="blogger" outlinePrimary>
       Я блогер
     </Button>
-    <Button
-      href="/app/?role=1"
+    <Button href="advertiser"
       class="hero__content-bloger-btn ml-40"
       outlinePrimary
     >

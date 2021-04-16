@@ -1,5 +1,5 @@
 <script>
-  import { Router, Link, Route } from 'svelte-routing'
+  import { Router, Route, links } from 'svelte-routing'
   import { checkMobile } from './helpers/media'
   import Advertiser from './pages/Advertiser.svelte'
   import Blogger from './pages/Blogger.svelte'
@@ -19,14 +19,10 @@
 </script>
 
 <svelte:window bind:innerWidth />
-
-<Router {url}>
-  <nav>
-    <Link to="/">Main</Link>
-    <Link to="blogger">Blogger</Link>
-    <Link to="advertiser">Advertiser</Link>
-  </nav>
-  <Route path="/" component={Main} />
-  <Route path="blogger" component={Blogger} />
-  <Route path="advertiser" component={Advertiser} />
-</Router>
+<div use:links>
+  <Router {url}>
+    <Route path="/" component={Main} />
+    <Route path="blogger" component={Blogger} />
+    <Route path="advertiser" component={Advertiser} />
+  </Router>
+</div>
