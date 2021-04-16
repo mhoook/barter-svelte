@@ -1,5 +1,6 @@
 <script>
-  import { onMount } from 'svelte'
+  import { isMobile } from '../../stores'
+
   import Card from '../../UI/card/Card.svelte'
 
   let cls = ''
@@ -19,9 +20,8 @@
   let left = defaultEllipseOffset
   let contentWidth = 0
   let contentHeight = 0
-  let isMobile = true
 
-  $: if (!isMobile && el && contentEl && scrollY) {
+  $: if (!$isMobile && el && contentEl && scrollY) {
     let lineWidth = contentWidth + (reverse ? 10 : 55)
     let value = (scrollY - (el.offsetTop - window.innerHeight / 2)) * 4
     if (value < 0) {
@@ -38,18 +38,12 @@
       left = lineWidth
     }
   }
-  $: if (contentEl) {
-    contentWidth = contentEl.getBoundingClientRect().width
-    contentHeight = contentEl.getBoundingClientRect().height
-  }
-
-  onMount(() => (isMobile = /Mobi/.test(navigator.userAgent)))
 </script>
 
 <svelte:window bind:scrollY />
 
 <div class="{cls} why-item" class:why-item--hide-line={hideLine} bind:this={el}>
-  {#if !hideLine && !isMobile}
+  {#if !hideLine && !$isMobile}
     <img
       src="src/assets/svg/ellipse.svg"
       style="position: absolute; z-index: 9; top: {top}px; left: {reverse
@@ -65,6 +59,8 @@
       class:order-md-0={!reverse}
       class:order-1={!reverse}
       bind:this={contentEl}
+      bind:clientHeight={contentHeight}
+      bind:clientWidth={contentWidth}
     >
       <Card
         class="why-item__content-index-card"

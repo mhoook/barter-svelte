@@ -12,6 +12,7 @@
   import Overlay, { toggleOverlay } from '../components/overlay/Overlay.svelte'
   import Promo from '../components/promo/Promo.svelte'
   import Reviews from '../components/reviews/Reviews.svelte'
+  import { isMobile } from '../stores'
   import Button from '../UI/button/Button.svelte'
   import Link from '../UI/link/Link.svelte'
 
@@ -71,7 +72,7 @@
 
   const toggleMenuMobile = () => {
     console.log('toggleMenuMobile')
-    if (/Mobi/.test(navigator.userAgent)) {
+    if ($isMobile) {
       toggleOverlay()
       document.querySelector('.navbar-toggler').click()
     }

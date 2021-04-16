@@ -8,6 +8,7 @@
   import Overlay, { toggleOverlay } from '../components/overlay/Overlay.svelte'
   import Suggestion from '../components/suggestion/Suggestion.svelte'
   import Team from '../components/team/Team.svelte'
+  import { isMobile } from '../stores'
   import Button from '../UI/button/Button.svelte'
 
   const hero = {
@@ -21,7 +22,7 @@
 
   const toggleMenuMobile = () => {
     console.log('toggleMenuMobile')
-    if (/Mobi/.test(navigator.userAgent)) {
+    if ($isMobile) {
       toggleOverlay()
       document.querySelector('.navbar-toggler').click()
     }

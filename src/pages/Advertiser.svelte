@@ -16,10 +16,10 @@
   import Reviews from '../components/reviews/Reviews.svelte'
   import SlidePhone from '../components/slide_phone/SlidePhone.svelte'
   import Why from '../components/why/Why.svelte'
+  import { isMobile } from '../stores'
   import Button from '../UI/button/Button.svelte'
   import Link from '../UI/link/Link.svelte'
 
-  const isMobile = /Mobi/.test(navigator.userAgent)
   const hero = {
     featuresItems: [
       {
@@ -39,7 +39,7 @@
 
   const toggleMenuMobile = () => {
     console.log('toggleMenuMobile')
-    if (isMobile) {
+    if ($isMobile) {
       toggleOverlay()
       document.querySelector('.navbar-toggler').click()
     }
@@ -78,7 +78,7 @@
   </div>
 </Hero>
 <How id="how" />
-{#if isMobile}
+{#if $isMobile}
   <ForWhatSection id="for-what" />
   <HowSecondary />
   <Promo

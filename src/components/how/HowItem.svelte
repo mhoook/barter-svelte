@@ -1,4 +1,6 @@
 <script>
+  import { checkMobile } from '../../helpers/media'
+
   let cls
 
   export { cls as class }
@@ -12,9 +14,13 @@
   export let scrollY
 
   $: if (el && scrollY) {
-    active =
-      scrollY > el.offsetTop - window.innerHeight / 2 &&
-      scrollY < el.offsetTop + window.innerHeight / 4
+    if (!checkMobile()) {
+      active =
+        scrollY > el.offsetTop - window.innerHeight / 2 &&
+        scrollY < el.offsetTop + window.innerHeight / 4
+    } else {
+      active = false
+    }
   }
 </script>
 
