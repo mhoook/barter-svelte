@@ -1,11 +1,7 @@
 <script>
   import { isMobile } from '../../stores'
-
   import Card from '../../UI/card/Card.svelte'
 
-  let cls = ''
-
-  export { cls as class }
   export let el
   export let contentEl
   export let index
@@ -42,7 +38,11 @@
 
 <svelte:window bind:scrollY />
 
-<div class="{cls} why-item" class:why-item--hide-line={hideLine} bind:this={el}>
+<div
+  class="{$$restProps.class} why-item"
+  class:why-item--hide-line={hideLine}
+  bind:this={el}
+>
   {#if !hideLine && !$isMobile}
     <img
       src="src/assets/svg/ellipse.svg"

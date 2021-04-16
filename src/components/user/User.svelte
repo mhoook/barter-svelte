@@ -1,7 +1,4 @@
 <script>
-  let cls = ''
-
-  export { cls as class }
   export let avatarCls = ''
   export let dataCls = ''
   export let titleCls = ''
@@ -10,10 +7,9 @@
   export let title
   export let description
   export let inline = false
-  console.log('$$', $$slots)
 </script>
 
-<div class="{cls} user">
+<div class="{$$restProps.class} user">
   {#if avatarUrl}
     <img class="{avatarCls} user__avatar" src={avatarUrl} alt="" />
   {/if}

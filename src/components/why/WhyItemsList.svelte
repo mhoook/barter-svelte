@@ -1,13 +1,10 @@
 <script>
   import WhyItem from './WhyItem.svelte'
 
-  let cls = ''
-
-  export { cls as class }
   export let items = []
 </script>
 
-<div class="{cls} why-items row">
+<div class="{$$restProps.class} why-items row">
   {#each items as item, i}
     <WhyItem
       class="why__item col-12"

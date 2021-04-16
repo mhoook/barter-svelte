@@ -1,11 +1,8 @@
 <script>
-  let cls = ''
-
-  export { cls as class }
   export let items = []
 </script>
 
-<div class="hero-features__wrapper {cls}">
+<div class="{$$restProps.class} hero-features__wrapper">
   <div class="hero-features__items row">
     {#each items as item, i}
       <div

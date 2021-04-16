@@ -1,15 +1,12 @@
 <script>
   import Card from '../../UI/card/Card.svelte'
 
-  let cls = ''
-
-  export { cls as class }
   export let imageUrl
   export let title
   export let description
 </script>
 
-<div class="features-item {cls}">
+<div class="{$$restProps.class} features-item">
   <div class="row">
     <div
       class="features-item__content-image-wrapper col-md-6 col-auto d-flex justify-content-center"

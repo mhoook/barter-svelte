@@ -1,12 +1,9 @@
 <script>
-  let cls = ''
-
-  export { cls as class }
   export let active = false
   export let title
 </script>
 
-<div class="{cls} categories-item" class:active on:click>
+<div class="{$$restProps.class} categories-item" class:active on:click>
   <slot>{title}</slot>
 </div>
 

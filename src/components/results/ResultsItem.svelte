@@ -3,9 +3,6 @@
   import User from '../user/User.svelte'
   import ResultsFeatures from './ResultsFeatures.svelte'
 
-  let cls = ''
-
-  export { cls as class }
   export let featuresItems = [
     {
       imageUrl: 'src/assets/svg/account.svg',
@@ -45,7 +42,7 @@
     'Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым. Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым'
 </script>
 
-<Card class="{cls} results__item">
+<Card class="{$$restProps.class} results__item">
   <User class="results__item-content-owner d-flex" {...ownerUser} />
   <div class="results__item-content-text mt-60">
     <p class="results__item-content-description text-muted">

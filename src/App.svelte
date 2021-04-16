@@ -12,12 +12,10 @@
   let innerWidth = window.innerWidth
 
   const onInnerWidthChange = () => {
-    console.log('onInnerWidthChange')
     $isMobile = checkMobile()
   }
 
   $: innerWidth, onInnerWidthChange()
-  $: console.log({ innerWidth })
 </script>
 
 <svelte:window bind:innerWidth />

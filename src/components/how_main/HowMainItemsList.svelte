@@ -4,7 +4,7 @@
   export let items = []
 </script>
 
-<div class="how-mainЯ__list row gy-5">
+<div class="how-main__list row gy-5">
   {#each items as item, i}
     <HowMainItem {...item} reverse={i % 2} />
   {/each}

@@ -1,12 +1,9 @@
 <script>
-  let cls = ''
-
-  export { cls as class }
   export let imageUrl
   export let description
 </script>
 
-<div class="for-what-item__wrapper {cls}">
+<div class="{$$restProps.class} for-what-item__wrapper">
   <div class="for-what-item d-flex align-items-center">
     <div class="for-what-item__image">
       <img src={imageUrl} alt="" />

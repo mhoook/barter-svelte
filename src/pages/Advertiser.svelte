@@ -38,7 +38,6 @@
   }
 
   const toggleMenuMobile = () => {
-    console.log('toggleMenuMobile')
     if ($isMobile) {
       toggleOverlay()
       document.querySelector('.navbar-toggler').click()

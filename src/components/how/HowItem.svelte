@@ -1,9 +1,6 @@
 <script>
   import { checkMobile } from '../../helpers/media'
 
-  let cls
-
-  export { cls as class }
   export let el
   export let imageUrl
   export let indexImageUrl
@@ -24,7 +21,7 @@
   }
 </script>
 
-<div class="how__item {cls}" class:active bind:this={el}>
+<div class="{$$restProps.class} how__item" class:active bind:this={el}>
   <div class="how__item-content row gx-5">
     <div
       class="how__item-content-image-wrapper col-md-6 col-12"

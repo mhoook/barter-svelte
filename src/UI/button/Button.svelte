@@ -1,7 +1,4 @@
 <script>
-  let cls = ''
-
-  export { cls as class }
   export let href
   export let primary
   export let outlinePrimary
@@ -9,7 +6,7 @@
 </script>
 
 <a
-  class="{cls} button btn"
+  class="{$$restProps.class} button btn"
   class:btn-outline-primary={outlinePrimary}
   class:btn-primary={primary}
   class:btn-light={light}

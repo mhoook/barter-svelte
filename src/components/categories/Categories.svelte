@@ -1,15 +1,12 @@
 <script>
   import CategoriesItemsList from './CategoriesItemsList.svelte'
 
-  let cls = ''
-
-  export { cls as class }
   export let itemsCls = ''
   export let title = 'Категории'
   export let items = []
 </script>
 
-<div class="{cls} categories">
+<div class="{$$restProps.class} categories">
   <h5 class="categories__title">{@html title}</h5>
   <slot>
     <CategoriesItemsList class={itemsCls} {items} />

@@ -1,7 +1,4 @@
 <script>
-  let cls = ''
-
-  export { cls as class }
   export let wrapperCls
   export let imageUrl
   export let description
@@ -9,7 +6,7 @@
 </script>
 
 <div class="{wrapperCls} for-you-item__wrapper col-12">
-  <div class="{cls} for-you-item row">
+  <div class="{$$restProps.class} for-you-item row">
     <div
       class="for-you-item__content-wrapper col-md-auto col-12"
       class:order-md-2={reverse}
