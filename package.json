@@ -39,6 +39,7 @@
     "dev": "webpack serve --content-base public"
   },
   "dependencies": {
+    "postcss": "^8.2.10",
     "svelte-routing": "^1.5.0"
   }
 }
