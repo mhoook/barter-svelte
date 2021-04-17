@@ -6,8 +6,7 @@
   export let actionsCls = 'mt-100 d-flex align-items-center hide-for-mobile'
   export let imageUrl = 'src/assets/images/hero.png'
   export let title = 'Начни привлекать клиентов через бартер с&nbsp;блогерами'
-  export let description =
-    '1000 проверенных блогеров ждут предложения и готовы рекомендовать твой продукт своим подписчикам.'
+  export let description = ''
   export let featuresItems = [
     {
       iconUrl: 'src/assets/icons/money.svg',
@@ -44,7 +43,9 @@
                 {@html description}
               </p>
             </div>
-
+            <slot name="features">
+              <HeroFeatures class="col-12 order-2" items={featuresItems} />
+            </slot>
             <HeroActions class="hero__content-actions {actionsCls}">
               <slot name="actions" />
             </HeroActions>
@@ -53,9 +54,6 @@
         <div class="hero__content-image-wrapper col-md-4 col-12">
           <img class="hero__content-image" src={imageUrl} alt="" />
         </div>
-        <slot name="features">
-          <HeroFeatures class="col-12 order-2" items={featuresItems} />
-        </slot>
 
         {#if showMobileActions}
           <div class="col-12 order-3 hide-for-desktop">

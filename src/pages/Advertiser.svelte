@@ -22,13 +22,14 @@
   import Link from '../UI/link/Link.svelte'
 
   const hero = {
+    description: '1000 проверенных блогеров ждут твоего предложения и готовы рекомендовать твой продукт своим подписчикам',
     featuresItems: [
       {
         iconUrl: 'src/assets/svg/money-bag-gradient.svg',
-        description: 'Без бюджета',
+        description: 'Без рекламного бюджета',
       },
       {
-        iconUrl: 'src/assets/svg/filter-gradient.svg',
+        iconUrl: 'src/assets/svg/easy.svg',
         description: 'Проще чем разместить объявление на авито',
       },
       {
@@ -62,48 +63,73 @@
 </Header>
 <Hero {...hero} showMobileActions>
   <div slot="actions">
-    <Button class="hero__content-bloger-btn" href="/app/?role=1" noroute outlinePrimary>Опубликовать предложение</Button>
+    <Button class="hero__content-bloger-btn" href="/app/?role=1" noroute outlinePrimary>Зарегистрироваться</Button>
     <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
   </div>
-  <div slot="mobileActions" class="mt-20 p-2 text-center">
+  <div slot="mobileActions" class="p-2 text-center">
     <div class="d-flex align-items-center justify-content-center">
-      <Button class="hero__content-bloger-btn" href="/app/?role=1" noroute outlinePrimary>Опубликовать предложение</Button
+      <Button class="hero__content-bloger-btn" href="/app/?role=1" noroute outlinePrimary>Зарегистрироваться</Button
       >
       <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
     </div>
-<!--     <p class="hero__content-actions-description mt-10">
-      Установи бесплатное приложение и получи доступ к товарам и услугам, за
-      которые не придется платить
-    </p> -->
+    
   </div>
+  <p class="hero__content-actions-description mt-10">
+    Установи бесплатное приложение и получи доступ к товарам и услугам, за
+    которые не придется платить
+  </p>
 </Hero>
-<How id="how" />
 {#if $isMobile}
-  <ForWhatSection id="for-what" />
   <HowSecondary />
-<!--   <Promo
+  <Promo
     on:googlePlayClick={handleGooglePlayClick}
     on:appStoreClick={handleAppStoreClick}
-  /> -->
+  />
 {:else}
   <SlidePhone paddingBottom={140}>
-    <ForWhatSection imageUrl={null} id="for-what" />
     <HowSecondary />
-<!--     <Promo
+    <Promo
       contentImageUrl={null}
       on:googlePlayClick={handleGooglePlayClick}
       on:appStoreClick={handleAppStoreClick}
-    /> -->
+    />
+    
+    
+    
   </SlidePhone>
 {/if}
-<Features />
-<Why />
-<!-- <Promo
-  on:googlePlayClick={handleGooglePlayClick}
-  on:appStoreClick={handleAppStoreClick}
-/> -->
 <FeaturesSecondary />
 <ForYou />
+<Promo
+  on:googlePlayClick={handleGooglePlayClick}
+  on:appStoreClick={handleAppStoreClick}
+/>
+<Why />
+<Promo
+  on:googlePlayClick={handleGooglePlayClick}
+  on:appStoreClick={handleAppStoreClick}
+/>
+<Features />
+
+<How id="how" />
+{#if $isMobile}
+  <Promo
+    on:googlePlayClick={handleGooglePlayClick}
+    on:appStoreClick={handleAppStoreClick}
+  />
+  <ForWhatSection id="for-what" />
+
+{:else}
+  <SlidePhone paddingBottom={140}>
+    <Promo
+      contentImageUrl={null}
+      on:googlePlayClick={handleGooglePlayClick}
+      on:appStoreClick={handleAppStoreClick}
+    />
+    <ForWhatSection imageUrl={null} id="for-what" />
+  </SlidePhone>
+{/if}
+
 <!-- <Results /> -->
 <!-- <Reviews id="reviews" /> -->
 <!-- <Faq /> -->

@@ -4,6 +4,7 @@
   export let outlinePrimary
   export let light
   export let noroute
+  export let style
 </script>
 
 <a
@@ -12,6 +13,7 @@
   class:btn-primary={primary}
   class:btn-light={light}
   {href}
+  {style}
   noroute={noroute}
   on:click
 >

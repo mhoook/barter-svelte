@@ -7,7 +7,7 @@
   let stickyTop = false
   let stickyBottom = false
   let top = 0
-
+  let width = 1320
   $: if (el && imageEl && scrollY) {
     let bottomEdge =
       el.offsetTop +
@@ -17,6 +17,7 @@
       90
     stickyBottom = scrollY > bottomEdge
     stickyTop = scrollY > el.offsetTop && scrollY < bottomEdge
+    width = Math.min(el.offsetWidth, 1320)
   }
 </script>
 
@@ -26,7 +27,7 @@
   <img
     src="src/assets/images/hero-mobile.png"
     alt=""
-    style="z-index: 9; left: calc((100vw - 1320px)/2 + 70px);"
+    style="z-index: 9; left: calc((100vw - {width}px)/2 + 70px);"
     height={imageHeight}
     class:position-top={stickyTop}
     class:position-absolute={!stickyTop && !stickyBottom}

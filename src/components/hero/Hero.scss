@@ -39,7 +39,7 @@
     margin-top: $margin--section-content-default;
 
     @include breakpoint-down(md) {
-      margin-top: $margin--section-content-sm-mobile;
+      margin-top: 0;
     }
 
     &-description {
@@ -50,7 +50,7 @@
     &-text {
       &-wrapper {
         @include breakpoint-down(md) {
-          margin-top: 25px;
+          margin-top: 10px;
         }
       }
     }
@@ -97,7 +97,7 @@
 
     &-bloger-btn {
       @include breakpoint-down(md) {
-        width: 50%;
+        width: 70%;
         margin: 0 !important;
       }
       &:first-child {

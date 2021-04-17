@@ -17,27 +17,40 @@
   const handleAppStoreClick = () => {
     dispatch('appStoreClick')
   }
+  let el
+  let wrapper
+  let width = 1320
+  $: if (el && wrapper) {
+    width = Math.min(el.offsetWidth, 1320)
+    // console.log(wrapper.getBoundingClientRect().x)
+    width += wrapper.getBoundingClientRect().x
+  }
 </script>
 
-<section class="promo">
+<section class="promo" bind:this={el}>
   <div class="promo__wrapper container">
     <div class="promo__content-wrapper">
       <div class="row h-100">
         <div
-          class="promo__content-image-wrapper col-md-6 col-3 d-flex justify-content-center"
+          class="promo__content-image-wrapper col-md-4 col-3 d-flex justify-content-center"
+          bind:this={wrapper}
         >
           {#if contentImageUrl}
-            <img class="promo__content-image" src={contentImageUrl} alt="" />
+            <img class="promo__content-image" src={contentImageUrl} style="left: calc((50vw - {width}px / 2) - 70px);" alt="" />
           {/if}
         </div>
-        <div class="col-md-6 col-9 d-flex align-items-center">
+        <div class="col-md-8 col-9 d-flex align-items-center">
           <div class="promo__content-text-wrapper">
             <h4
               class="promo__content-title text text--light text--uppercase text--bold"
             >
-              {@html title}
+              Начни привлекать клиентов через блогеров
+              <!-- {@html title} -->
             </h4>
-            <div class="promo__content-actions d-flex">
+            <Button class="promo__content-tryit-btn p-1 pl-15 pr-15 d-flex align-items-center justify-content-center" style="max-width: 300px" light>
+              Начать
+            </Button>
+           <!--  <div class="promo__content-actions d-flex">
               <Button
                 class="promo__btn p-1 pl-15 pr-15 d-flex align-items-center justify-content-center"
                 on:click={handleGooglePlayClick}
@@ -53,7 +66,8 @@
                 <img src={appStoreImageUrl} alt="" />
               </Button>
             </div>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </div>

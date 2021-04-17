@@ -11,7 +11,7 @@
   @include breakpoint-down(md) {
     &:not(:first-child) {
       @include breakpoint-down(md) {
-        margin-top: 65px !important;
+        margin-top: 25px !important;
       }
     }
   }
@@ -27,9 +27,9 @@
       right: 0;
 
       @include breakpoint-down(md) {
-        top: -60px;
+        top: -40px;
         right: 0;
-        width: 200px;
+        width: 130px;
         z-index: -1;
       }
     }

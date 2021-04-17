@@ -34,7 +34,7 @@
     },
     {
       imageUrl: 'src/assets/svg/plus-circle.svg',
-      description: ' Другие офлайн бизнесы',
+      description: 'Другие категории бизнеса',
     },
   ]
 </script>

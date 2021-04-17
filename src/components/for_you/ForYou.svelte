@@ -1,7 +1,7 @@
 <script>
   import ForYouItemsList from './ForYouItemsList.svelte'
 
-  export let title = 'ЭТОТ СЕРВИС ТОЧНО ДЛЯ ТЕБЯ ЕСЛИ ТЫ:'
+  export let title = 'BARTER ТОЧНО ДЛЯ ТЕБЯ ЕСЛИ ТЫ:'
   export let items = [
     {
       imageUrl: 'src/assets/svg/credit-card-payment.svg',
