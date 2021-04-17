@@ -76,7 +76,7 @@
 
       @include breakpoint-down(md) {
         right: auto;
-        left: 30px;
+        margin-left: 100px;
         top: -45px;
         width: 100px !important;
         height: auto;
@@ -115,8 +115,7 @@
       }
     }
 
-    &-tryit-btn {
-      width: 300px;
+    &-с {
 
       @include breakpoint-down(md) {
         width: 160px;
