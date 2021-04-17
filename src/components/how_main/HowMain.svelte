@@ -8,7 +8,7 @@
     {
       imageUrl: 'src/assets/svg/how-image1.svg',
       indexImageUrl: 'src/assets/svg/01.svg',
-      title: 'БЛОГЕР ВИДИТ ПРЕДЛОЖЕНИЕ И ОСТАВЛЯЕТ ЗАЯВКУ',
+      title: 'БИЗНЕС СОЗДАЕТ СВОЕ ПРЕДЛОЖЕНИЕ',
     },
     {
       imageUrl: 'src/assets/svg/how-image2.svg',

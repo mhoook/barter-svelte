@@ -5,10 +5,11 @@
   const dispatch = createEventDispatcher()
 
   export let title =
-    'УСТАНОВИ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ И РАЗМЕСТИ ПЕРВОЕ ПРЕДЛОЖЕНИЕ'
+    'Начни привлекать клиентов через блогеров'
   export let contentImageUrl = 'src/assets/images/hero-mobile.png'
   export let googlePlayImageUrl = 'src/assets/svg/google-play.svg'
   export let appStoreImageUrl = 'src/assets/svg/app-store.svg'
+  export let action = 'Начать'
 
   const handleGooglePlayClick = () => {
     dispatch('googlePlayClick')
@@ -44,11 +45,11 @@
             <h4
               class="promo__content-title text text--light text--uppercase text--bold"
             >
-              Начни привлекать клиентов через блогеров
-              <!-- {@html title} -->
+              
+              {@html title}
             </h4>
             <Button class="promo__content-tryit-btn p-1 pl-15 pr-15 d-flex align-items-center justify-content-center" style="max-width: 300px" light>
-              Начать
+              {@html action}
             </Button>
            <!--  <div class="promo__content-actions d-flex">
               <Button

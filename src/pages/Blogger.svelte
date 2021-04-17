@@ -20,7 +20,7 @@
   const hero = {
     imageUrl: 'src/assets/images/hero2.png',
     title: 'Сотни товаров и услуг за рекомендацию в инстаграм',
-    description: 'Бесплатно получи доступ к товарам и услугам, за которые не придется платить',
+    description: 'Получи доступ к товарам и услугам, за которые не придется платить',
     featuresItems: [
       {
         iconUrl: 'src/assets/svg/money-bag-gradient.svg',
@@ -31,7 +31,7 @@
         description: 'Используя удобные фильтры',
       },
       {
-        iconUrl: 'src/assets/svg/hand-gradient.svg',
+        iconUrl: 'src/assets/svg/easy.svg',
         description: 'Просто как листать ленту в инстаграм',
       },
     ],
@@ -96,12 +96,12 @@
 </Header>
 <Hero {...hero} showMobileActions>
   <div slot="actions">
-    <Button class="hero__content-bloger-btn" href="/app/?role=0" noroute outlinePrimary>Получить предложение</Button>
+    <Button class="hero__content-bloger-btn" href="/app/?role=0" noroute outlinePrimary>Регистрация</Button>
     <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
   </div>
   <div slot="mobileActions" class="mt-20 p-2 text-center">
     <div class="d-flex align-items-center justify-content-center">
-      <Button class="hero__content-bloger-btn" href="/app/?role=0" noroute outlinePrimary>Получить предложение</Button
+      <Button class="hero__content-bloger-btn" href="/app/?role=0" noroute outlinePrimary>Регистрация</Button
       >
       <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
     </div>
@@ -117,10 +117,12 @@
   background-position: 85% 100%;"
   {...featuresSecondary}
 />
-<!-- <Promo
+<Promo
+  title="Находи товары и услуги по бартеру"
+  action="начни"
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
-/> -->
+/>
 <HowBlogger id="how" />
 <!-- <Clients id="clients" />
 <Reviews id="reviews" /> -->
@@ -131,4 +133,10 @@
   <FooterMenuItem scrolltoEl={'#reviews'}>Отзывы</FooterMenuItem>
   <FooterMenuItem url="/policy">Политика конфиденциальности</FooterMenuItem>
 </Footer> -->
+<Promo
+  title="Находи товары и услуги по бартеру"
+  action="начни"
+  on:googlePlayClick={handleGooglePlayClick}
+  on:appStoreClick={handleAppStoreClick}
+/>
 <FooterSecondary />

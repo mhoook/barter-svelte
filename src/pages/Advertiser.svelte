@@ -33,7 +33,7 @@
         description: 'Проще чем разместить объявление на авито',
       },
       {
-        iconUrl: 'src/assets/svg/hand-gradient.svg',
+        iconUrl: 'src/assets/svg/exercise.svg',
         description: 'В 10 раз быстрее, чем искать самостоятельно',
       },
     ],
