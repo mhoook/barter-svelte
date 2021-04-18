@@ -41,6 +41,15 @@
   }
 
   &__item {
+    &-features {
+      &-item {
+        margin-top: 8px;
+        img {
+          margin-bottom: auto;
+          margin-top: 6px;
+        }
+      }
+    }
     &-wrapper {
       padding: 15px;
       padding-left: 60px;

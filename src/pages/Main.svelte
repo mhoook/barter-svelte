@@ -41,7 +41,7 @@
   </NavbarItem>
 </Header>
 <Hero {...hero}>
-  <div class="d-flex align-items-center mb-100" slot="actions">
+  <div class="d-flex align-items-center" slot="actions">
     <Button class="hero__content-bloger-btn" href="/blogger" outlinePrimary>
       Я блогер
     </Button>

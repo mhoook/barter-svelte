@@ -11,7 +11,7 @@
   import How from '../components/how/How.svelte'
   import HowSecondary from '../components/how_secondary/HowSecondary.svelte'
   import NavbarItem from '../components/navbar/NavbarItem.svelte'
-  import Overlay, { toggleOverlay } from '../components/overlay/Overlay.svelte'
+  import Overlay, { hideOverlay } from '../components/overlay/Overlay.svelte'
   import Promo from '../components/promo/Promo.svelte'
   import Results from '../components/results/Results.svelte'
   import Reviews from '../components/reviews/Reviews.svelte'
@@ -41,7 +41,7 @@
 
   const toggleMenuMobile = () => {
     if ($isMobile) {
-      toggleOverlay()
+      hideOverlay()
       document.querySelector('.navbar-toggler').click()
     }
   }
@@ -51,11 +51,17 @@
 
 <Overlay />
 <Header loginUrl="/app/?role=1">
+  <NavbarItem url="/" on:click={toggleMenuMobile}>
+    Главная
+  </NavbarItem>
   <NavbarItem scrolltoEl={'#how'} on:touchstart={toggleMenuMobile}>
     Это выгодно
   </NavbarItem>
   <NavbarItem scrolltoEl={'#for-what'} on:touchstart={toggleMenuMobile}>
     Для чего нужен сервис
+  </NavbarItem>
+  <NavbarItem url="/blogger" on:click={toggleMenuMobile}>
+    Для блогеров
   </NavbarItem>
 <!--   <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
     Отзывы

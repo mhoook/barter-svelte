@@ -10,7 +10,7 @@
   import Hero from '../components/hero/Hero.svelte'
   import HowBlogger from '../components/how_blogger/HowBlogger.svelte'
   import NavbarItem from '../components/navbar/NavbarItem.svelte'
-  import Overlay, { toggleOverlay } from '../components/overlay/Overlay.svelte'
+  import Overlay, { hideOverlay } from '../components/overlay/Overlay.svelte'
   import Promo from '../components/promo/Promo.svelte'
   import Reviews from '../components/reviews/Reviews.svelte'
   import { isMobile } from '../stores'
@@ -74,7 +74,7 @@
 
   const toggleMenuMobile = () => {
     if ($isMobile) {
-      toggleOverlay()
+      hideOverlay()
       document.querySelector('.navbar-toggler').click()
     }
   }
@@ -84,8 +84,14 @@
 
 <Overlay />
 <Header loginUrl="/app/?role=0">
+  <NavbarItem url="/" on:click={toggleMenuMobile}>
+    Главная
+  </NavbarItem>
   <NavbarItem scrolltoEl={'#how'} on:touchstart={toggleMenuMobile}>
     Как это работает
+  </NavbarItem>
+  <NavbarItem url="/advertiser" on:click={toggleMenuMobile}>
+    Для бизнеса
   </NavbarItem>
 <!--   <NavbarItem scrolltoEl={'#clients'} on:touchstart={toggleMenuMobile}>
     В сервисе работают
