@@ -17,12 +17,14 @@
   import Reviews from '../components/reviews/Reviews.svelte'
   import SlidePhone from '../components/slide_phone/SlidePhone.svelte'
   import Why from '../components/why/Why.svelte'
+  import { router } from '../router'
   import { isMobile } from '../stores'
   import Button from '../UI/button/Button.svelte'
   import Link from '../UI/link/Link.svelte'
 
   const hero = {
-    description: '1000 проверенных блогеров ждут твоего предложения и готовы рекомендовать твой продукт своим подписчикам',
+    description:
+      '1000 проверенных блогеров ждут твоего предложения и готовы рекомендовать твой продукт своим подписчикам',
     featuresItems: [
       {
         iconUrl: 'src/assets/svg/money-bag-gradient.svg',
@@ -39,6 +41,11 @@
     ],
   }
 
+  const goToBlogger = () => {
+    toggleMenuMobile()
+    router.push('/blogger')
+  }
+
   const toggleMenuMobile = () => {
     if ($isMobile) {
       hideOverlay()
@@ -51,34 +58,38 @@
 
 <Overlay />
 <Header loginUrl="/app/advertiser/auth/login">
-  <NavbarItem url="/" on:click={toggleMenuMobile}>
-    Главная
-  </NavbarItem>
+  <NavbarItem url="/" on:click={toggleMenuMobile}>Главная</NavbarItem>
   <NavbarItem scrolltoEl={'#how'} on:touchstart={toggleMenuMobile}>
     Это выгодно
   </NavbarItem>
   <NavbarItem scrolltoEl={'#for-what'} on:touchstart={toggleMenuMobile}>
     Для чего нужен сервис
   </NavbarItem>
-  <NavbarItem url="/blogger" on:click={toggleMenuMobile}>
-    Для блогеров
-  </NavbarItem>
-<!--   <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
+  <NavbarItem on:touchstart={goToBlogger}>Для блогеров</NavbarItem>
+  <!--   <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
     Отзывы
   </NavbarItem> -->
 </Header>
 <Hero {...hero} showMobileActions>
   <div slot="actions">
-    <Button class="hero__content-bloger-btn" href="/app/?role=1" noroute outlinePrimary>Зарегистрироваться</Button>
+    <Button
+      class="hero__content-bloger-btn"
+      href="/app/?role=1"
+      noroute
+      outlinePrimary>Зарегистрироваться</Button
+    >
     <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
   </div>
   <div slot="mobileActions" class="p-2 text-center">
     <div class="d-flex align-items-center justify-content-center">
-      <Button class="hero__content-bloger-btn" href="/app/?role=1" noroute outlinePrimary>Зарегистрироваться</Button
+      <Button
+        class="hero__content-bloger-btn"
+        href="/app/?role=1"
+        noroute
+        outlinePrimary>Зарегистрироваться</Button
       >
       <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
     </div>
-    
   </div>
   <p class="hero__content-actions-description mt-10">
     Установи бесплатное приложение и получи доступ к товарам и услугам, за
@@ -99,9 +110,6 @@
       on:googlePlayClick={handleGooglePlayClick}
       on:appStoreClick={handleAppStoreClick}
     />
-    
-    
-    
   </SlidePhone>
 {/if}
 <FeaturesSecondary />
@@ -124,7 +132,6 @@
     on:appStoreClick={handleAppStoreClick}
   />
   <ForWhatSection id="for-what" />
-
 {:else}
   <SlidePhone paddingBottom={140}>
     <Promo
