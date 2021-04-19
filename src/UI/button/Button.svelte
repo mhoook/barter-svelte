@@ -5,6 +5,16 @@
   export let light
   export let noroute
   export let style
+
+  import { router } from '../../router'
+
+  const clickHandler = (e) => {
+    if (!noroute) {
+      e.preventDefault()
+      router.push(e.target.getAttribute('href'))
+    }
+  }
+
 </script>
 
 <a
@@ -15,7 +25,7 @@
   {href}
   {style}
   noroute={noroute}
-  on:click
+  on:click={clickHandler}
 >
   <slot />
 </a>

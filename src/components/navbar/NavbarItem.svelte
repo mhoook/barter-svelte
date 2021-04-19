@@ -1,5 +1,6 @@
 <script>
   import { scrollto } from 'svelte-scrollto'
+  import Link from '../../UI/link/Link'
   export let url
   export let scrolltoEl
 </script>
@@ -16,8 +17,8 @@
       <slot />
     </a>
   {:else}
-    <a class="nav-link" href={url} on:click on:touchstart>
+    <Link class="nav-link" href={url} noStyle on:click on:touchstart>
       <slot />
-    </a>
+    </Link>
   {/if}
 </li>

@@ -117,17 +117,13 @@
     </p> -->
   </div>
 </Hero>
-<FeaturesSecondary
-  style="background-image: url('src/assets/images/solar.png');
-  background-repeat: no-repeat;
-  background-position: 85% 100%;"
-  {...featuresSecondary}
-/>
+<FeaturesSecondary />
 <Promo
   title="Находи товары и услуги по бартеру"
   action="начни"
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
+  actionUrl="/app/blogger/auth/login"
 />
 <HowBlogger id="how" />
 <!-- <Clients id="clients" />
@@ -139,10 +135,17 @@
   <FooterMenuItem scrolltoEl={'#reviews'}>Отзывы</FooterMenuItem>
   <FooterMenuItem url="/policy">Политика конфиденциальности</FooterMenuItem>
 </Footer> -->
+<FeaturesSecondary
+  style="background-image: url('src/assets/images/solar.png');
+  background-repeat: no-repeat;
+  background-position: 85% 100%;"
+  {...featuresSecondary}
+/>
 <Promo
   title="Находи товары и услуги по бартеру"
   action="начни"
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
+  actionUrl="/app/blogger/auth/login"
 />
 <FooterSecondary />

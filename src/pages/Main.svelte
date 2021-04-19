@@ -43,14 +43,10 @@
 </Header>
 <Hero {...hero}>
   <div class="d-flex align-items-center" slot="actions">
-    <RouterLink to="/blogger">
-      <Button class="hero__content-bloger-btn" outlinePrimary>Я блогер</Button>
-    </RouterLink>
-    <RouterLink to="/advertiser">
-      <Button class="hero__content-bloger-btn ml-40" outlinePrimary>
-        Я бизнес
-      </Button>
-    </RouterLink>
+    <Button class="hero__content-bloger-btn" href="/blogger" outlinePrimary>Я блогер</Button>
+    <Button class="hero__content-bloger-btn ml-40" href="/advertiser" outlinePrimary>
+      Я бизнес
+    </Button>
   </div>
 </Hero>
 <HowMain id="how-main" />

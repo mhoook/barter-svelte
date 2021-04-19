@@ -18,31 +18,50 @@
     $isMobile = checkMobile()
   }
 
+  const qs = (function(a) {
+    if (a == "") return {}
+    let b = {}
+    for (let i = 0; i < a.length; ++i)
+    {
+        let p=a[i].split('=', 2)
+        if (p.length == 1)
+            b[p[0]] = ""
+        else
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "))
+    }
+    return b
+  })(window.location.search.substr(1).split('&'))
+
+  const saveRefLink = () => {
+    document.querySelectorAll('[href^="/"]').forEach(function(item){
+      item.setAttribute('href', item.getAttribute('href')+'?r='+qs.r)
+    })
+  }
+
   onMount(() => {
-    router.beforeEach((to, from, next) => {
-      if (to) console.log(`go to ${to.fullPath}`)
-      if (from) console.log(`from ${from.fullPath}`)
-      next()
-    })
-
+    if (qs.r){
+      setTimeout(()=>{
+        saveRefLink()
+      }, 500)
+    }
     router.afterEach((to, from) => {
-      console.log('We are on new page!')
+      if (qs.r){
+        saveRefLink()
+      }
     })
 
-    router.transitionOut((to, from, next) => {
-      console.log('Page "faded away": do something!')
-      next()
-    })
   })
 
   $: innerWidth, onInnerWidthChange()
+
+  
 </script>
 
 <svelte:window bind:innerWidth />
 <EasyrouteProvider {router}>
-  <RouterLink to={'/'} />
+<!--   <RouterLink to={'/'} />
   <RouterLink to={'/blogger'} />
-  <RouterLink to={'/advertiser'} />
+  <RouterLink to={'/advertiser'} /> -->
   <RouterOutlet />
 </EasyrouteProvider>
 <!-- <div use:links>

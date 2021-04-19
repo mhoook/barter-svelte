@@ -10,6 +10,7 @@
   export let googlePlayImageUrl = 'src/assets/svg/google-play.svg'
   export let appStoreImageUrl = 'src/assets/svg/app-store.svg'
   export let action = 'Начать'
+  export let actionUrl = '/app/'
 
   const handleGooglePlayClick = () => {
     dispatch('googlePlayClick')
@@ -48,7 +49,7 @@
               
               {@html title}
             </h4>
-            <Button class="promo__content-tryit-btn p-1 pl-15 pr-15 d-flex align-items-center justify-content-center" style="max-width: 300px" light>
+            <Button class="promo__content-tryit-btn p-1 pl-15 pr-15 d-flex align-items-center justify-content-center" noroute href={actionUrl} style="max-width: 300px" light>
               {@html action}
             </Button>
            <!--  <div class="promo__content-actions d-flex">

@@ -17,14 +17,13 @@
   import Reviews from '../components/reviews/Reviews.svelte'
   import SlidePhone from '../components/slide_phone/SlidePhone.svelte'
   import Why from '../components/why/Why.svelte'
-  import { router } from '../router'
   import { isMobile } from '../stores'
   import Button from '../UI/button/Button.svelte'
   import Link from '../UI/link/Link.svelte'
 
   const hero = {
-    description:
-      '1000 проверенных блогеров ждут твоего предложения и готовы рекомендовать твой продукт своим подписчикам',
+    title: 'Начни привлекать клиентов в свой бизнес через бартер с блогерами',
+    description: 'Тысячи проверенных блогеров ждут твоих предложений и готовы рекомендовать твои продукты и услуги своим подписчикам',
     featuresItems: [
       {
         iconUrl: 'src/assets/svg/money-bag-gradient.svg',
@@ -41,10 +40,10 @@
     ],
   }
 
-  const goToBlogger = () => {
-    toggleMenuMobile()
-    router.push('/blogger')
-  }
+  // const goToBlogger = () => {
+  //   toggleMenuMobile()
+  //   router.push('/blogger')
+  // }
 
   const toggleMenuMobile = () => {
     if ($isMobile) {
@@ -65,7 +64,7 @@
   <NavbarItem scrolltoEl={'#for-what'} on:touchstart={toggleMenuMobile}>
     Для чего нужен сервис
   </NavbarItem>
-  <NavbarItem on:touchstart={goToBlogger}>Для блогеров</NavbarItem>
+  <NavbarItem  url="/blogger" on:touchstart={toggleMenuMobile}>Для блогеров</NavbarItem>
   <!--   <NavbarItem scrolltoEl={'#reviews'} on:touchstart={toggleMenuMobile}>
     Отзывы
   </NavbarItem> -->
@@ -101,6 +100,7 @@
   <Promo
     on:googlePlayClick={handleGooglePlayClick}
     on:appStoreClick={handleAppStoreClick}
+    actionUrl="/app/advertiser/auth/login"
   />
 {:else}
   <SlidePhone paddingBottom={140}>
@@ -109,6 +109,7 @@
       contentImageUrl={null}
       on:googlePlayClick={handleGooglePlayClick}
       on:appStoreClick={handleAppStoreClick}
+      actionUrl="/app/advertiser/auth/login"
     />
   </SlidePhone>
 {/if}
@@ -117,11 +118,13 @@
 <Promo
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
+  actionUrl="/app/advertiser/auth/login"
 />
 <Why />
 <Promo
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
+  actionUrl="/app/advertiser/auth/login"
 />
 <Features />
 
@@ -130,6 +133,7 @@
   <Promo
     on:googlePlayClick={handleGooglePlayClick}
     on:appStoreClick={handleAppStoreClick}
+    actionUrl="/app/advertiser/auth/login"
   />
   <ForWhatSection id="for-what" />
 {:else}
@@ -138,6 +142,7 @@
       contentImageUrl={null}
       on:googlePlayClick={handleGooglePlayClick}
       on:appStoreClick={handleAppStoreClick}
+      actionUrl="/app/advertiser/auth/login"
     />
     <ForWhatSection imageUrl={null} id="for-what" />
   </SlidePhone>
