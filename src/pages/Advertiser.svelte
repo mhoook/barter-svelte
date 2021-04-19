@@ -50,7 +50,7 @@
 </script>
 
 <Overlay />
-<Header loginUrl="/app/?role=1">
+<Header loginUrl="/app/advertiser/auth/login">
   <NavbarItem url="/" on:click={toggleMenuMobile}>
     Главная
   </NavbarItem>

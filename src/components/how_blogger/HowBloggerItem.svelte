@@ -11,8 +11,8 @@
 
   $: if (el && scrollY) {
     active =
-      scrollY > el.offsetTop - window.innerHeight / 2 &&
-      scrollY < el.offsetTop + window.innerHeight / 4
+      // scrollY > el.offsetTop - window.innerHeight / 2 &&
+      scrollY < el.offsetTop - window.innerHeight / 5
   }
 </script>
 

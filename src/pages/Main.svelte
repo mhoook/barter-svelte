@@ -29,7 +29,7 @@
 </script>
 
 <Overlay />
-<Header loginUrl="/login">
+<Header loginUrl="/app/">
   <NavbarItem scrolltoEl={'#how-main'} on:touchstart={toggleMenuMobile}>
     Как это работает
   </NavbarItem>

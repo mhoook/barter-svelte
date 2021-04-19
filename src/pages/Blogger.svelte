@@ -83,7 +83,7 @@
 </script>
 
 <Overlay />
-<Header loginUrl="/app/?role=0">
+<Header loginUrl="/app/blogger/auth/login">
   <NavbarItem url="/" on:click={toggleMenuMobile}>
     Главная
   </NavbarItem>
