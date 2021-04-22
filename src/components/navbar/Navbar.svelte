@@ -1,6 +1,6 @@
 <script>
   import Button from '../../UI/button/Button.svelte'
-  import Link from '../../UI/Link/Link.svelte'
+  import Link from '../../UI/link/Link.svelte'
   import { hideOverlay, toggleOverlay } from '../overlay/Overlay.svelte'
   // import { Link } from 'svelte-routing'
   export let loginUrl
