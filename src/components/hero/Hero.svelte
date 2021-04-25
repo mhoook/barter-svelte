@@ -4,8 +4,9 @@
 
   export let showMobileActions = false
   export let actionsCls = 'mt-100 d-flex align-items-center hide-for-mobile'
-  export let imageUrl = 'src/assets/images/hero.png'
-  export let title = 'Начни привлекать клиентов через бартер с&nbsp;блогерами'
+  export let imageUrl = ''
+  export let image2Url = ''
+  export let title = ''
   export let description = ''
   export let featuresItems = [
     {
@@ -52,6 +53,9 @@
           </div>
         </div>
         <div class="hero__content-image-wrapper col-md-4 col-12">
+          {#if image2Url}
+            <img class="hero__content-image hero__content-image2" src={image2Url} alt="" />
+          {/if}
           <img class="hero__content-image" src={imageUrl} alt="" />
         </div>
 

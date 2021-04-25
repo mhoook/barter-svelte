@@ -11,34 +11,34 @@
         },
       ],
     },
-    {
-      title: 'ПОМОЩЬ',
-      items: [
-        {
-          url: 'https://t.me/barter_social',
-          title: 'Telegram',
-        },
-      ],
-    },
+    // {
+    //   title: 'ПОМОЩЬ',
+    //   items: [
+    //     {
+    //       url: 'https://t.me/barter_social',
+    //       title: 'Telegram',
+    //     },
+    //   ],
+    // },
     {
       title: 'КОНТАКТЫ',
       items: [
         {
-          url: 'mailto:info@barter.social',
-          title: 'info@barter.social',
+          url: 'mailto:info@barter.do',
+          title: 'info@barter.do',
         },
       ],
     },
   ]
   export let socialItems = [
     {
-      url: 'https://www.instagram.com/barter.social/',
+      url: 'https://www.instagram.com/barter.pro/',
       imageUrl: 'src/assets/svg/instagram.svg',
     },
-    {
-      url: 'https://t.me/barter_social',
-      imageUrl: 'src/assets/svg/telegram.svg',
-    },
+    // {
+    //   url: 'https://t.me/barter_social',
+    //   imageUrl: 'src/assets/svg/telegram.svg',
+    // },
   ]
 </script>
 

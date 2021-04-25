@@ -72,7 +72,7 @@
       <p class="text-muted">Founder, CEO компании</p>
     </div>
     <div class="suggestion__actions">
-      <Button href="https://t.me/drannikov" class="text text--bold" primary>
+      <Button href="https://t.me/drannikov" noroute class="text text--bold" primary>
         Написать
       </Button>
     </div>
