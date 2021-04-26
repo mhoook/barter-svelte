@@ -24,8 +24,8 @@
   const hero = {
     title: 'Начни привлекать клиентов в свой бизнес через бартер с блогерами',
     description: 'Тысячи проверенных блогеров ждут твоих предложений и готовы рекомендовать твои продукты и услуги своим подписчикам',
-    image2Url: 'src/assets/images/hero.png',
-    imageUrl: 'src/assets/images/hero-blink.png',
+    imageUrl: 'src/assets/images/hero.png',
+    image2Url: 'src/assets/images/hero-blink.png',
     featuresItems: [
       {
         iconUrl: 'src/assets/svg/money-bag-gradient.svg',

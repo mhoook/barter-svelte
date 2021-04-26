@@ -2,8 +2,14 @@
 @import '../../styles/variables';
 
 @keyframes blinker {
+  0% {
+    opacity: 1;
+  }
   50% {
-    opacity: .3;
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -67,8 +73,10 @@
     }
 
     &-image {
+      max-width: 100%;
       &-wrapper {
         text-align: center;
+        position: relative;
       }
 
       @include breakpoint-down(md) {
