@@ -1,7 +1,7 @@
 <script>
   import Button from '../../UI/button/Button.svelte'
   import Link from '../../UI/link/Link.svelte'
-  import { hideOverlay, toggleOverlay } from '../overlay/Overlay.svelte'
+  import { hideOverlay, showOverlay } from '../overlay/Overlay.svelte'
   // import { Link } from 'svelte-routing'
   export let loginUrl
   export let items = []
@@ -35,7 +35,7 @@
         width="22"
         on:click={toggleMenu}
       />
-      <span class="navbar-toggler-icon" on:click={toggleOverlay} />
+      <span class="navbar-toggler-icon" on:click={showOverlay} />
     </button>
     <div
       class="navbar__navbar-collapse collapse navbar-collapse"

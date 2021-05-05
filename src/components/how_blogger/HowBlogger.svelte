@@ -23,7 +23,7 @@
       imageUrl: 'src/assets/svg/job-offers-draw.svg',
       indexImageUrl: 'src/assets/svg/02.svg',
       lightIndexImageUrl: 'src/assets/svg/02_gray.svg',
-      title: 'Выбирай подходящее предложение',
+      title: 'Выбери подходящее предложение',
       description:
         'Принимай и отклоняй входящие заявки и оставляй заявки самостоятельно',
     },
@@ -38,7 +38,7 @@
       imageUrl: 'src/assets/svg/selfie-draw.svg',
       indexImageUrl: 'src/assets/svg/03.svg',
       lightIndexImageUrl: 'src/assets/svg/03_gray.svg',
-      title: 'Получай товар или услугу и делай рекомендацию в Instagram',
+      title: 'Получи товар или услугу и сделай рекомендацию в Instagram',
       description: 'Дождись предоставления услуги или доставки товара и выложи stories или пост по указанным условиям',
     },
   ]

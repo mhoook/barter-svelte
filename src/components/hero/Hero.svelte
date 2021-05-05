@@ -33,7 +33,7 @@
     <div class="hero__content">
       <div class="hero__content-grid row">
         <div
-          class="hero__content-text-wrapper col-md-8 col-12 order-1 order-md-0 d-flex align-items-end"
+          class="hero__content-text-wrapper col-md-7 col-12 order-1 order-md-0 d-flex align-items-end"
         >
           <div class="hero__content-text mb-20">
             <h1 class="hero__content-title">
@@ -52,11 +52,13 @@
             </HeroActions>
           </div>
         </div>
-        <div class="hero__content-image-wrapper col-md-4 col-12">
-          {#if image2Url}
-            <img class="hero__content-image hero__content-image2" src={image2Url} alt="" />
-          {/if}
-          <img class="hero__content-image" src={imageUrl} alt="" />
+        <div class="hero__content-image-wrapper col-md-5 col-12">
+          <div style="position: relative;">
+            {#if image2Url}
+              <img class="hero__content-image hero__content-image2" src={image2Url} alt="" />
+            {/if}
+            <img class="hero__content-image" src={imageUrl} alt="" />
+          </div>
         </div>
 
         {#if showMobileActions}

@@ -48,6 +48,11 @@
       if (qs.r){
         saveRefLink()
       }
+      const overlay = document.querySelector('.overlay--active')
+      if (overlay) {
+        document.querySelector('.overlay--active').classList.remove('overlay--active');
+      }
+      
     })
 
   })

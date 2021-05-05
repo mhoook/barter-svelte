@@ -24,8 +24,8 @@
       title: 'КОНТАКТЫ',
       items: [
         {
-          url: 'mailto:info@barter.do',
-          title: 'info@barter.do',
+          url: 'mailto:info@barter.social',
+          title: 'info@barter.social',
         },
       ],
     },

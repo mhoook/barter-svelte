@@ -22,22 +22,36 @@
   import Link from '../UI/link/Link.svelte'
 
   const hero = {
-    title: 'Начни привлекать клиентов в свой бизнес через бартер с блогерами',
+    title: 'Начни привлекать клиентов в свой бизнес через блогеров без рекламного бюджета',
     description: 'Тысячи проверенных блогеров ждут твоих предложений и готовы рекомендовать твои продукты и услуги своим подписчикам',
     imageUrl: 'src/assets/images/hero.png',
     image2Url: 'src/assets/images/hero-blink.png',
+    // featuresItems: [
+    //   {
+    //     iconUrl: 'src/assets/svg/money-bag-gradient.svg',
+    //     description: 'Без рекламного бюджета',
+    //   },
+    //   {
+    //     iconUrl: 'src/assets/svg/easy.svg',
+    //     description: 'Проще чем разместить объявление на авито',
+    //   },
+    //   {
+    //     iconUrl: 'src/assets/svg/exercise.svg',
+    //     description: 'В 10 раз быстрее, чем искать самостоятельно',
+    //   },
+    // ],
     featuresItems: [
       {
-        iconUrl: 'src/assets/svg/money-bag-gradient.svg',
-        description: 'Без рекламного бюджета',
-      },
-      {
         iconUrl: 'src/assets/svg/easy.svg',
-        description: 'Проще чем разместить объявление на авито',
+        description: 'Опубликуй свое первое предложение',
       },
       {
-        iconUrl: 'src/assets/svg/exercise.svg',
-        description: 'В 10 раз быстрее, чем искать самостоятельно',
+        iconUrl: 'src/assets/svg/filter-gradient.svg',
+        description: 'Выбирай подходящих блогеров',
+      },
+      {
+        iconUrl: 'src/assets/svg/money-bag-gradient.svg',
+        description: 'Получай первых клиентов',
       },
     ],
   }
@@ -49,8 +63,8 @@
 
   const toggleMenuMobile = () => {
     if ($isMobile) {
-      hideOverlay()
       document.querySelector('.navbar-toggler').click()
+      // hideOverlay()
     }
   }
   const handleGooglePlayClick = () => console.log('googlePlayClick')
@@ -75,7 +89,7 @@
   <div slot="actions">
     <Button
       class="hero__content-bloger-btn"
-      href="/app/?role=1"
+      href="/app/advertiser/auth/login"
       noroute
       outlinePrimary>Зарегистрироваться</Button
     >
@@ -85,7 +99,7 @@
     <div class="d-flex align-items-center justify-content-center">
       <Button
         class="hero__content-bloger-btn"
-        href="/app/?role=1"
+        href="/app/advertiser/auth/login"
         noroute
         outlinePrimary>Зарегистрироваться</Button
       >

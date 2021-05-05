@@ -20,7 +20,7 @@
   const hero = {
     imageUrl: 'src/assets/images/hero2.png',
     title: 'Сотни товаров и услуг за рекомендацию в инстаграм',
-    description: 'Получи доступ к товарам и услугам, за которые не придется платить',
+    description: 'Зарегистрируйся и получи доступ к товарам и услугам, за которые не придется платить',
     featuresItems: [
       {
         iconUrl: 'src/assets/svg/money-bag-gradient.svg',
@@ -38,7 +38,7 @@
   }
 
   const featuresSecondary = {
-    title: 'БЛАГОДАРЯ СЕРВИСУ ВЫ СМОЖЕТЕ',
+    title: 'БЛАГОДАРЯ СЕРВИСУ ТЫ СМОЖЕШЬ',
     items: [
       {
         imageUrl: 'src/assets/icons/filter.svg',
@@ -74,8 +74,9 @@
 
   const toggleMenuMobile = () => {
     if ($isMobile) {
-      hideOverlay()
       document.querySelector('.navbar-toggler').click()
+      document.querySelector('.overlay--active').classList.remove('overlay--active')
+      // hideOverlay()
     }
   }
   const handleGooglePlayClick = () => console.log('googlePlayClick')
@@ -102,12 +103,12 @@
 </Header>
 <Hero {...hero} showMobileActions>
   <div slot="actions">
-    <Button class="hero__content-bloger-btn" href="/app/?role=0" noroute outlinePrimary>Регистрация</Button>
+    <Button class="hero__content-bloger-btn" href="/app/blogger/auth/login" noroute outlinePrimary>Регистрация</Button>
     <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
   </div>
   <div slot="mobileActions" class="mt-20 p-2 text-center">
     <div class="d-flex align-items-center justify-content-center">
-      <Button class="hero__content-bloger-btn" href="/app/?role=0" noroute outlinePrimary>Регистрация</Button
+      <Button class="hero__content-bloger-btn" href="/app/blogger/auth/login" noroute outlinePrimary>Регистрация</Button
       >
       <!-- <Link class="hero__content-more-link ml-40">Подробнее о сервисе</Link> -->
     </div>
@@ -119,8 +120,8 @@
 </Hero>
 <FeaturesSecondary />
 <Promo
-  title="Находи товары и услуги по бартеру"
-  action="начни"
+  title="Зарегистрируйся и находи товары и услуги по бартеру"
+  action="Зарегистрироваться"
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
   actionUrl="/app/blogger/auth/login"
@@ -142,8 +143,8 @@
   {...featuresSecondary}
 />
 <Promo
-  title="Находи товары и услуги по бартеру"
-  action="начни"
+  title="Зарегистрируйся и находи товары и услуги по бартеру"
+  action="Зарегистрироваться"
   on:googlePlayClick={handleGooglePlayClick}
   on:appStoreClick={handleAppStoreClick}
   actionUrl="/app/blogger/auth/login"
